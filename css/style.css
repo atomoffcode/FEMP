@@ -7,6 +7,12 @@
 header {
   border-bottom: 1px solid #e2e2e2;
 }
+header a {
+  transition: 0.3s !important;
+}
+header a:hover {
+  color: #c0a483 !important;
+}
 
 .container {
   max-width: 1440px !important;
@@ -91,6 +97,10 @@ header {
 }
 .section-1-header .head-2 .head-2-all .h2right .login a {
   padding: 0;
+  transition: 0.3s !important;
+}
+.section-1-header .head-2 .head-2-all .h2right .login a:hover {
+  color: #c0a483;
 }
 .section-1-header .head-2 .head-2-all .h2right .navs-2 {
   display: flex;
@@ -241,13 +251,15 @@ header {
   color: #c0a483;
 }
 .section-1 .shopbycategory .drinks div {
-  transition: 0.3s;
   position: relative;
   width: auto;
   height: auto;
   padding: 0;
 }
-.section-1 .shopbycategory .drinks div:hover {
+.section-1 .shopbycategory .drinks div img {
+  transition: 0.3s;
+}
+.section-1 .shopbycategory .drinks div img:hover {
   filter: grayscale(1);
 }
 .section-1 .shopbycategory .drinks div .txts {
@@ -380,13 +392,103 @@ header {
   margin: 10px 0 40px;
 }
 .section-2 .container .slider2 .drink {
+  position: relative;
   width: 450px;
   height: 450px;
-  background-image: url(https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2018/10/Wine-01-03-450x450.jpg.webp);
+}
+.section-2 .container .slider2 .drink img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+.section-2 .container .slider2 .drink .mininavs {
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  z-index: 12;
+  right: 3%;
+  bottom: 14%;
+}
+.section-2 .container .slider2 .drink .mininavs div {
+  transition: 0.3s;
+  margin: 5px 0;
+  border: 1px solid rgba(163, 163, 163, 0.4588235294);
+  padding: 12px;
+}
+.section-2 .container .slider2 .drink .mininavs div:hover {
+  background-color: #c0a483;
+}
+.section-2 .container .slider2 .drink .mininavs div:hover i {
+  transition: 0.3s;
+  color: white;
+}
+.section-2 .container .slider2 .drink .mininavs i {
+  transition: 0.3s;
+  margin: auto;
+  font-size: 1.25rem;
+}
+.section-2 .container .slider2 .drink .mininavs .bag {
+  transform: rotateY(90deg);
+}
+.section-2 .container .slider2 .drink .mininavs .bag i {
+  font-size: 1.4rem;
+}
+.section-2 .container .slider2 .drink .mininavs .heart {
+  transform: rotateY(90deg);
+  transition-delay: 0.1s;
+}
+.section-2 .container .slider2 .drink .mininavs .search {
+  transform: rotateY(90deg);
+  transition-delay: 0.2s;
+}
+.section-2 .container .slider2 .drink .discount {
+  font-family: "Marcellus", serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background-color: #b12a2a;
+  color: white;
+  z-index: 12;
+  left: 2%;
+  top: 2%;
+}
+.section-2 .container .slider2 .drink .hot {
+  font-family: "Marcellus", serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background-color: #c0a483;
+  color: white;
+  z-index: 11;
+  right: 2%;
+  top: 2%;
+}
+.section-2 .container .slider2 .drink .fst {
+  position: absolute;
   transition: 0.3s;
 }
-.section-2 .container .slider2 .drink:hover {
-  background-image: url(https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/Product26-450x450.jpg.webp);
+.section-2 .container .slider2 .drink .sec {
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s;
+}
+.section-2 .container .slider2 .drink:hover .mininavs div {
+  transform: rotateY(0deg);
+}
+.section-2 .container .slider2 .drink:hover .fst {
+  opacity: 0;
+  display: none;
+}
+.section-2 .container .slider2 .drink:hover .sec {
+  opacity: 1;
 }
 
 .slick-dots li button::before {
@@ -397,6 +499,55 @@ header {
   display: none;
 }
 
+.section-3 .slick-next {
+  transition: 0.3s;
+  opacity: 0;
+  top: 170px;
+  right: 0px;
+  z-index: 1111;
+  color: black;
+}
+.section-3 .slick-next:hover::before {
+  background-color: white;
+  color: black;
+}
+.section-3 .slick-next::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f105";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-size: 2rem;
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  transition: 0.3s;
+  color: black;
+}
+.section-3 .slick-prev {
+  transition: 0.3s;
+  opacity: 0;
+  top: 170px;
+  left: 0px;
+  z-index: 1112;
+}
+.section-3 .slick-prev:hover::before {
+  background-color: white;
+  color: black;
+}
+.section-3 .slick-prev::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f104";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-size: 2rem;
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  transition: 0.3s;
+  color: black;
+}
 .section-3 .container .s3-top {
   padding: 40px 0;
 }
@@ -494,8 +645,13 @@ header {
   padding: 5px 0;
 }
 .s3-bottom-bottom .s3bb-all .s3bb-bottom .mailsubmit {
+  transition: 0.3s;
   margin: 0 20px;
   padding: 5px 15px;
+}
+.s3-bottom-bottom .s3bb-all .s3bb-bottom .mailsubmit:hover {
+  color: #c0a483;
+  border-color: #c0a483;
 }
 .s3-bottom-bottom .s3bb-all .s3bb-bottom input {
   background-color: rgba(255, 0, 0, 0);
@@ -516,6 +672,14 @@ header {
   color: white;
 }
 
+.slider3:hover .slick-next {
+  opacity: 1;
+  right: -30px;
+}
+.slider3:hover .slick-prev {
+  opacity: 1;
+  left: -30px;
+}
 .slider3 .top {
   padding: 7px 0;
   text-align: center;
@@ -551,16 +715,107 @@ header {
   margin: 10px 0 40px;
 }
 .slider3 .drink {
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0 auto !important;
   border: 1px solid rgba(163, 163, 163, 0.4588235294);
   background-size: contain;
   width: 328px;
   height: 328px;
-  background-image: url(https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2018/10/Wine-01-03-450x450.jpg.webp);
+  position: relative;
+}
+.slider3 .drink img {
+  width: 100%;
+  cursor: pointer;
+}
+.slider3 .drink .mininavs {
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  z-index: 12;
+  right: 3%;
+  bottom: 14%;
+}
+.slider3 .drink .mininavs div {
+  transition: 0.3s;
+  margin: 5px 0;
+  border: 1px solid rgba(163, 163, 163, 0.4588235294);
+  padding: 12px;
+}
+.slider3 .drink .mininavs div:hover {
+  background-color: #c0a483;
+}
+.slider3 .drink .mininavs div:hover i {
+  transition: 0.3s;
+  color: white;
+}
+.slider3 .drink .mininavs i {
+  transition: 0.3s;
+  margin: auto;
+  font-size: 1.25rem;
+}
+.slider3 .drink .mininavs .bag {
+  transform: rotateY(90deg);
+}
+.slider3 .drink .mininavs .bag i {
+  font-size: 1.4rem;
+}
+.slider3 .drink .mininavs .heart {
+  transform: rotateY(90deg);
+  transition-delay: 0.1s;
+}
+.slider3 .drink .mininavs .search {
+  transform: rotateY(90deg);
+  transition-delay: 0.2s;
+}
+.slider3 .drink:hover .mininavs div {
+  transform: rotateY(0deg);
+}
+.slider3 .drink:hover .fst {
+  opacity: 0;
+  display: none;
+}
+.slider3 .drink:hover .sec {
+  opacity: 1;
+}
+.slider3 .drink .discount {
+  font-family: "Marcellus", serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background-color: #b12a2a;
+  color: white;
+  z-index: 12;
+  left: 2%;
+  top: 2%;
+}
+.slider3 .drink .hot {
+  font-family: "Marcellus", serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background-color: #c0a483;
+  color: white;
+  z-index: 11;
+  right: 2%;
+  top: 2%;
+}
+.slider3 .drink .fst {
+  position: absolute;
   transition: 0.3s;
 }
-.slider3 .drink:hover {
-  background-image: url(https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/Product26-450x450.jpg.webp);
+.slider3 .drink .sec {
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s;
 }
 
 .topsvg {
@@ -596,7 +851,11 @@ header {
   padding: 20px 0;
   text-align: center;
 }
+.section-4 .s4-middle .s4m-all div:hover img {
+  scale: 1.05;
+}
 .section-4 .s4-middle .s4m-all div img {
+  transition: 0.3s;
   max-height: 120px;
 }
 
@@ -665,5 +924,19 @@ a {
   transition: 0.3s !important;
 }
 a:hover {
-  color: #c0a483 !important;
+  color: #c0a483;
+}
+
+#myBtn {
+  opacity: 0;
+  transition: 0.3s;
+  position: fixed;
+  z-index: 1232323;
+  right: 30px;
+  bottom: 10px;
+  background-color: #c0a483;
+  padding: 7px 14px;
+}
+#myBtn i {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
