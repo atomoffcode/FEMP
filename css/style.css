@@ -928,7 +928,7 @@ a:hover {
 }
 
 #myBtn {
-  opacity: 0;
+  display: none;
   transition: 0.3s;
   position: fixed;
   z-index: 1232323;

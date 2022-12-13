@@ -1076,7 +1076,8 @@ a{
 
 
 #myBtn{
-    opacity: 0;
+    // opacity: 0;
+    display: none;
     transition: .3s;
     position: fixed;
     z-index: 1232323;
