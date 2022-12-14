@@ -210,6 +210,9 @@
 .section-3 .s3-all .s3-left .categories .c-bottom {
   margin: 0 0 50px;
 }
+.section-3 .s3-all .s3-left .categories .c-bottom .c-ins:hover .name, .section-3 .s3-all .s3-left .categories .c-bottom .c-ins:hover .count {
+  color: black;
+}
 .section-3 .s3-all .s3-left .categories .c-bottom .name {
   font-size: 14px;
   color: #868686;

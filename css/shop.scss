@@ -254,6 +254,14 @@ $lllgray: #f1f1f1;
             .categories{
                 
                 .c-bottom{
+                    .c-ins{
+                        &:hover{
+                            .name,.count{
+                                color: black;
+                            }
+                        }
+                    }
+                    
                     margin: 0 0 50px;
                     .name{
                         font-size: 14px;
