@@ -652,7 +652,9 @@ header{
                 color: #fff;
                 font-family: $marcellus;
                 h2{
-                    
+                    span{
+                        color: #c0a483;
+                    }
                 }
                 a{
                     margin: 15px 0 0 0;
@@ -665,6 +667,9 @@ header{
 
                     color: #fff;
                     display: inline-block;
+                    &:hover{
+                        background-color: #c0a483;
+                    }
                 }
             }
         }
@@ -680,9 +685,7 @@ header{
                     }
                 }
             }
-            .s3-middle-middle{
-                
-            }
+            
             .s3-middle-bottom{
                 margin: 0 0 50px 0;
                 .s3mb-all{

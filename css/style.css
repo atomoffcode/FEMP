@@ -575,6 +575,9 @@ header a:hover {
   color: #fff;
   font-family: "Marcellus", serif;
 }
+.section-3 .container .s3-top .s3-top-all h2 span {
+  color: #c0a483;
+}
 .section-3 .container .s3-top .s3-top-all a {
   margin: 15px 0 0 0;
   letter-spacing: 1px;
@@ -584,6 +587,9 @@ header a:hover {
   text-decoration: none;
   color: #fff;
   display: inline-block;
+}
+.section-3 .container .s3-top .s3-top-all a:hover {
+  background-color: #c0a483;
 }
 .section-3 .container .s3-middle .s3-middle-top {
   margin: 10px 0 30px 0;
