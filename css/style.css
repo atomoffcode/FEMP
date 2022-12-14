@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+::-moz-selection {
+  background: #c0a483;
+  color: white;
+}
+
+::selection {
+  background: #c0a483;
+  color: white;
+}
+
 header {
   border-bottom: 1px solid #e2e2e2;
 }
@@ -595,6 +605,9 @@ header a:hover {
 .section-3 .container .s3-middle .s3-middle-bottom .s3mb-all .s3mb {
   padding: 50px 10px 45px;
 }
+.section-3 .container .s3-middle .s3-middle-bottom .s3mb-all .s3mb .topall {
+  position: relative;
+}
 .section-3 .container .s3-middle .s3-middle-bottom .s3mb-all .s3mb .topall .bottomtxt {
   color: white;
 }
@@ -818,11 +831,60 @@ header a:hover {
   transition: 0.3s;
 }
 
+@-webkit-keyframes shake {
+  0% {
+    left: 50%;
+  }
+  25% {
+    left: 47%;
+  }
+  50% {
+    left: 53%;
+  }
+  75% {
+    left: 49%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    left: 50%;
+  }
+  25% {
+    left: 47%;
+  }
+  50% {
+    left: 53%;
+  }
+  75% {
+    left: 49%;
+  }
+  100% {
+    left: 50%;
+  }
+}
 .topsvg {
-  margin: auto;
+  position: relative;
+  width: 100%;
+  height: 111px;
+}
+.topsvg .svg {
+  transform: translate(-50%);
+  position: absolute;
+  left: 50%;
   width: 33%;
+  height: 100%;
   border: 1px solid white;
   border-radius: 50%;
+}
+.topsvg .svg:hover {
+  -webkit-animation: shake 0.5s;
+          animation: shake 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .topsvg svg {
   scale: 0.5;
