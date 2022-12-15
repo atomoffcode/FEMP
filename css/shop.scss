@@ -21,6 +21,15 @@ $lllgray: #f1f1f1;
     margin: auto;
 }
 
+
+.navi{
+    
+        display: inline-block;
+        margin: 0 0 0 5px;
+        font-size: 10px;
+        font-weight: bold;
+    
+}
 .section-1-header{
     padding: 15px 0;
     .head-2{
@@ -32,7 +41,8 @@ $lllgray: #f1f1f1;
         a{
             font-size: 14px;
             padding: 0 20px;
-            display: inline-block;
+            display: flex;
+            align-items: center;
             text-decoration: none;
             color: black;
             font-family: $marcellus;
@@ -53,13 +63,11 @@ $lllgray: #f1f1f1;
                     a{
                         display: flex;
                         align-items: center;
-                        i{
-                            display: inline-block;
-                            margin: 0 0 0 5px;
-                            font-size: 7px;
-                            font-weight: bold;
-                        }
+                        
+                        
+                        
                     }
+                    
                 }
             }
             .h2right{
@@ -264,11 +272,13 @@ $lllgray: #f1f1f1;
                     
                     margin: 0 0 50px;
                     .name{
+                        font-family: $opensans;
                         font-size: 14px;
                         color: $lgray;
 
                     }
                     .count{
+                        font-family: $opensans;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -282,6 +292,234 @@ $lllgray: #f1f1f1;
 
                 }
             }
+            .bottlesize,.vintage{
+                .sizes,.years{
+                    span{
+                        display: inline-block;
+                        font-size: 14px;
+                        font-family: $marcellus;
+                        color: $lgray;
+                        padding: 11px 15px;
+                        margin: 5px 5px 5px 0;
+                        border: 1px solid $llgray;
+                        transition: .1s;
+                        cursor: pointer;
+                        &:hover{
+                            color: black;
+                            border-color: black;
+                        }
+
+                    }
+                }
+            }
+            .brands{
+                .brand{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    
+                    span{
+                        transition: .1s;
+                        margin: 0 0 10px;
+                        padding: 5px;
+                        display: inline-block;
+                        width: 31%;
+                        border: 1px solid $llgray;
+                        &:hover{
+                            border-color: black;
+                        }
+
+                    }
+                    img{
+                        width: 100%;
+
+                    }
+                }
+            }
+            .fepro{
+                .pro{
+                    .feproduct{
+                        margin: 0 0 18px;
+                        padding: 0 0 18px;
+                        border-bottom: 1px solid $lllgray; 
+                    
+                    width: 330px;
+                    .rt{
+                        width: 215px;
+                        overflow: hidden;
+                        padding: 0 0 0 15px;
+                        .top{
+                            padding: 0 0 5px;
+                            margin: -2px 0 0;
+                            // text-align: center;
+                            i{
+                                scale: 0.65;
+                                width: 12px;
+                                color: #ea1e1e;
+                            }
+                            p{
+                                display: inline-block;
+                                font-size: 12px;
+                                font-family: $opensans;
+                                color: #a3a3a3;
+                            }
+                        }
+                        .smltxt{
+                            margin: 0 auto 5px;
+                            // text-align: center;
+                            width: 100%;
+                            display: block;
+                            text-decoration: none;
+                            color: black;
+                            font-size: 12px;
+                            font-family: $marcellus;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                            transition: .1s;
+                            &:hover{
+                
+                                color: #c0a483;
+                                
+                            }
+                    
+                        }
+                        .bottom{
+                            p{
+                                color: #c0a483;
+                                font-size: 1rem;
+                                font-family: $marcellus;
+                                // text-align: center;
+                                // margin: 10px 0 40px;
+                            }
+                        }
+                    }
+                    .drink{
+                        object-fit: cover;
+                        img{
+                            width: 100%;
+                            cursor: pointer;
+                        }
+                        // margin: 0 auto !important;
+                        border: 1px solid $llgray;
+                        width: 78px;
+                        height: 78px;
+                        // background-image: url(https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2018/10/Wine-01-03-450x450.jpg.webp);
+                        // transition: .3s;
+                        // &:hover{
+                        //     background-image: url(https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/Product26-450x450.jpg.webp);
+                        // }
+                        .mininavs{
+                            display: none;
+                            cursor: pointer;
+                
+                            overflow: hidden;
+                            position: absolute;
+                            z-index: 12;
+                            right: 3%;
+                            bottom: 14%;
+                            div{
+                                
+                                transition: .3s;
+                                margin: 5px 0;
+                                border: 1px solid #a3a3a375;
+                                padding: 12px;
+                                &:hover{
+                                    background-color: #c0a483;
+                                    i{
+                                        transition: .3s;
+                                        color: white;
+                                    }
+                                }
+                            }
+                            i{
+                                transition: .3s;
+                                margin: auto;
+                                font-size: 1.25rem;
+                                // padding: 10px;
+                            }
+                            .bag{
+                                transform: rotateY(90deg);
+                                
+                                i{
+                                    font-size: 1.4rem;
+                                }
+                            }
+                            .heart{
+                                transform: rotateY(90deg);
+                
+                                transition-delay: .1s;
+                            }
+                            .search{
+                                transform: rotateY(90deg);
+                
+                                transition-delay: .2s;
+                            }
+                        }
+                        &:hover{
+                            .mininavs{
+                                div{
+                                    transform: rotateY(0deg);
+                                }
+                            }
+                
+                
+                            .fst{
+                                opacity: 0;
+                                display: none;
+                            }
+                            .sec{opacity: 1;}
+                            // background-image: url(https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/Product26-450x450.jpg.webp);
+                        }
+                        
+                        
+                        .discount{
+                            font-family: $marcellus;
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            position: absolute;
+                            display: none;
+                            width: 50px;
+                            height: 25px;
+                            background-color: #b12a2a;
+                            color: white;
+                            z-index: 12;
+                            left: 2%;
+                            top: 2%;
+                            
+                        }
+                        .hot{
+                            display: none;
+                            font-family: $marcellus;
+                            text-align: center;
+                            align-items: center;
+                            position: absolute;
+                            display: none;
+                            width: 50px;
+                            height: 25px;
+                            background-color: #c0a483;
+                            color: white;
+                            z-index: 11;
+                            right: 2%;
+                            top: 2%;
+                        }
+                        position: relative;
+                        .fst{
+                            position: absolute;
+                            transition: .3s;
+                
+                        }
+                        .sec{
+                            opacity: 0;
+                            position: absolute;
+                        transition: .3s;
+                
+                        }
+                    }
+                
+                    }
+                }
+            }
             
 
         }
@@ -290,7 +528,7 @@ $lllgray: #f1f1f1;
             padding: 0 15px;
             width: 75%;
             .s3r-top{
-                margin: -5px 0 20px;
+                margin: -5px 0 45px;
                 .s3rt-left{
                     color: #868686;
                     font-size: 14px;
@@ -367,7 +605,276 @@ $lllgray: #f1f1f1;
                     }
                 }
             }
+            .s3r-bottom{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .products{
+                    
+                    width: 23%;
+                    .top{
+                        padding: 7px 0;
+                        text-align: center;
+                        i{
+                            scale: 0.65;
+                            width: 12px;
+                            color: #ea1e1e;
+                        }
+                        p{
+                            display: inline-block;
+                            font-size: 12px;
+                            font-family: $opensans;
+                            color: #a3a3a3;
+                        }
+                    }
+                    .smltxt{
+                        margin: 0 auto;
+                        text-align: center;
+                        width: 100%;
+                        display: block;
+                        text-decoration: none;
+                        color: black;
+                        font-size: 12px;
+                        font-family: $marcellus;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        transition: .1s;
+                        &:hover{
+            
+                            color: #c0a483;
+                            
+                        }
+                
+                    }
+                    .bottom{
+                        p{
+                            color: #c0a483;
+                            font-size: 1rem;
+                            font-family: $marcellus;
+                            text-align: center;
+                            margin: 10px 0 40px;
+                        }
+                    }
+                    .drink{
+                        object-fit: cover;
+                        img{
+                            width: 100%;
+                            cursor: pointer;
+                        }
+                        margin: 0 auto !important;
+                        border: 1px solid #a3a3a375;
+                        background-size: contain;
+                        width: 240px;
+                        height: 240px;
+                        // background-image: url(https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2018/10/Wine-01-03-450x450.jpg.webp);
+                        // transition: .3s;
+                        // &:hover{
+                        //     background-image: url(https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/Product26-450x450.jpg.webp);
+                        // }
+                        .mininavs{
+                            cursor: pointer;
+                
+                            overflow: hidden;
+                            position: absolute;
+                            z-index: 12;
+                            right: 3%;
+                            bottom: 14%;
+                            div{
+                                
+                                transition: .3s;
+                                margin: 5px 0;
+                                border: 1px solid #a3a3a375;
+                                padding: 12px;
+                                &:hover{
+                                    background-color: #c0a483;
+                                    i{
+                                        transition: .3s;
+                                        color: white;
+                                    }
+                                }
+                            }
+                            i{
+                                transition: .3s;
+                                margin: auto;
+                                font-size: 1.25rem;
+                                // padding: 10px;
+                            }
+                            .bag{
+                                transform: rotateY(90deg);
+                                
+                                i{
+                                    font-size: 1.4rem;
+                                }
+                            }
+                            .heart{
+                                transform: rotateY(90deg);
+                
+                                transition-delay: .1s;
+                            }
+                            .search{
+                                transform: rotateY(90deg);
+                
+                                transition-delay: .2s;
+                            }
+                        }
+                        &:hover{
+                            .mininavs{
+                                div{
+                                    transform: rotateY(0deg);
+                                }
+                            }
+                
+                
+                            .fst{
+                                opacity: 0;
+                                display: none;
+                            }
+                            .sec{opacity: 1;}
+                            // background-image: url(https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/Product26-450x450.jpg.webp);
+                        }
+                        
+                        
+                        .discount{
+                            font-family: $marcellus;
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            position: absolute;
+                            display: inline-block;
+                            width: 50px;
+                            height: 25px;
+                            background-color: #b12a2a;
+                            color: white;
+                            z-index: 12;
+                            left: 2%;
+                            top: 2%;
+                            
+                        }
+                        .hot{
+                            font-family: $marcellus;
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            position: absolute;
+                            display: inline-block;
+                            width: 50px;
+                            height: 25px;
+                            background-color: #c0a483;
+                            color: white;
+                            z-index: 11;
+                            right: 2%;
+                            top: 2%;
+                        }
+                        position: relative;
+                        .fst{
+                            position: absolute;
+                            transition: .3s;
+                
+                        }
+                        .sec{
+                            opacity: 0;
+                            position: absolute;
+                        transition: .3s;
+                
+                        }
+                    }
+                }
+            }
 
         }
     }
+}
+
+footer{
+    .foot-all{
+        padding: 50px 0;
+    }
+    a{
+        text-decoration: none;
+    }
+    .ftxt{
+        padding: 0 0 10px 0;
+    }
+    background-color: #86868614;
+    h2{
+        font-size: 16px;
+        font-family: $marcellus;
+        padding: 0 0 20px 0;
+    }
+    p{
+        padding: 0 0 10px 0;
+        strong{
+            color: black;   
+        }
+        font-size: 14px;
+        font-family: $opensans;
+        color: #868686;
+    }
+    a{
+        transition: .3s !important;
+    &:hover{
+        color: #c0a483 ;
+    }
+        display: block;
+        text-decoration: none;
+        padding: 0 0 10px 0;
+        strong{
+            color: black;   
+        }
+        font-size: 14px;
+        font-family: $opensans;
+        color: #868686;
+    }
+    .fa-brands{
+        margin: 0 3px;
+    }
+    .fa-twitter{
+        margin: 0 3px 0 0;
+    }
+    .fa-pinterest{
+        margin: 0 0 0 3px;
+
+    }
+    i{
+        border: 1px solid #a3a3a3;
+        border-radius: 50%;
+        padding: 10px;
+        
+
+        transition: .3s !important;
+        &:hover{
+            color: white;
+            background-color: #c0a483 !important;
+        }
+
+    }
+    .foot-bottom{
+        padding: 20px 0 10px;
+        border-top: 1px solid #a3a3a375;
+        
+    }
+}
+
+a{
+    transition: .3s !important;
+    &:hover{
+        color: #c0a483 ;
+    }
+}
+
+
+#myBtn{
+    // opacity: 0;
+    display: none;
+    transition: .3s;
+    position: fixed;
+    z-index: 1232323;
+    right: 30px;
+    bottom: 10px;
+    background-color: #c0a483;
+    i{
+        color: white;
+    }
+    padding: 7px 14px;
+
 }

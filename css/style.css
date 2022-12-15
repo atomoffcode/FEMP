@@ -74,6 +74,13 @@ header a:hover {
   color: #c0a483 !important;
 }
 
+.navi {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
 .section-1-header {
   padding: 15px 0;
 }
@@ -383,6 +390,7 @@ header a:hover {
   color: #a3a3a3;
 }
 .section-2 .container .slider2 .smltxt {
+  transition: 0.1s;
   margin: 0 auto;
   text-align: center;
   width: 60%;
@@ -393,6 +401,9 @@ header a:hover {
   font-family: "Marcellus", serif;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+.section-2 .container .slider2 .smltxt:hover {
+  color: #c0a483;
 }
 .section-2 .container .slider2 .bottom p {
   color: #c0a483;
@@ -715,6 +726,7 @@ header a:hover {
   color: #a3a3a3;
 }
 .slider3 .smltxt {
+  transition: 0.1s;
   margin: 0 auto;
   text-align: center;
   width: 60%;
@@ -725,6 +737,9 @@ header a:hover {
   font-family: "Marcellus", serif;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+.slider3 .smltxt:hover {
+  color: #c0a483;
 }
 .slider3 .bottom p {
   color: #c0a483;

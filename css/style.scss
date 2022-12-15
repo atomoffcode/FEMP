@@ -79,6 +79,16 @@ header{
     }
     
 }
+
+.navi{
+    
+    display: inline-block;
+    margin: 0 0 0 5px;
+    font-size: 10px;
+    font-weight: bold;
+
+}
+
 .section-1-header{
     padding: 15px 0;
     .head-2{
@@ -407,6 +417,8 @@ header{
                 }
             }
             .smltxt{
+                
+                transition: .1s;
                 margin: 0 auto;
                 text-align: center;
                 width: 60%;
@@ -417,6 +429,11 @@ header{
                 font-family: $marcellus;
                 text-transform: uppercase;
                 letter-spacing: 1px;
+                &:hover{
+                    
+                    color: #c0a483;
+                    
+                }
 
             }
             .bottom{
@@ -813,6 +830,8 @@ header{
         }
     }
     .smltxt{
+        
+        transition: .1s;
         margin: 0 auto;
         text-align: center;
         width: 60%;
@@ -823,6 +842,11 @@ header{
         font-family: $marcellus;
         text-transform: uppercase;
         letter-spacing: 1px;
+        &:hover{
+            
+            color: #c0a483;
+            
+        }
 
     }
     .bottom{
@@ -897,6 +921,7 @@ header{
             }
         }
         &:hover{
+            
             .mininavs{
                 div{
                     transform: rotateY(0deg);

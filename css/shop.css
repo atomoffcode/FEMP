@@ -19,6 +19,13 @@
   margin: auto;
 }
 
+.navi {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
 .section-1-header {
   padding: 15px 0;
 }
@@ -31,7 +38,8 @@
 .section-1-header .head-2 a {
   font-size: 14px;
   padding: 0 20px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: black;
   font-family: "Marcellus", serif;
@@ -49,12 +57,6 @@
 .section-1-header .head-2 .head-2-all .h2left .navs a {
   display: flex;
   align-items: center;
-}
-.section-1-header .head-2 .head-2-all .h2left .navs a i {
-  display: inline-block;
-  margin: 0 0 0 5px;
-  font-size: 7px;
-  font-weight: bold;
 }
 .section-1-header .head-2 .head-2-all .h2right .login a {
   padding: 0;
@@ -214,10 +216,12 @@
   color: black;
 }
 .section-3 .s3-all .s3-left .categories .c-bottom .name {
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   color: #868686;
 }
 .section-3 .s3-all .s3-left .categories .c-bottom .count {
+  font-family: "Open Sans", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -228,13 +232,195 @@
   width: 25px;
   height: 25px;
 }
+.section-3 .s3-all .s3-left .bottlesize .sizes span, .section-3 .s3-all .s3-left .bottlesize .years span, .section-3 .s3-all .s3-left .vintage .sizes span, .section-3 .s3-all .s3-left .vintage .years span {
+  display: inline-block;
+  font-size: 14px;
+  font-family: "Marcellus", serif;
+  color: #868686;
+  padding: 11px 15px;
+  margin: 5px 5px 5px 0;
+  border: 1px solid #cecece;
+  transition: 0.1s;
+  cursor: pointer;
+}
+.section-3 .s3-all .s3-left .bottlesize .sizes span:hover, .section-3 .s3-all .s3-left .bottlesize .years span:hover, .section-3 .s3-all .s3-left .vintage .sizes span:hover, .section-3 .s3-all .s3-left .vintage .years span:hover {
+  color: black;
+  border-color: black;
+}
+.section-3 .s3-all .s3-left .brands .brand {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.section-3 .s3-all .s3-left .brands .brand span {
+  transition: 0.1s;
+  margin: 0 0 10px;
+  padding: 5px;
+  display: inline-block;
+  width: 31%;
+  border: 1px solid #cecece;
+}
+.section-3 .s3-all .s3-left .brands .brand span:hover {
+  border-color: black;
+}
+.section-3 .s3-all .s3-left .brands .brand img {
+  width: 100%;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct {
+  margin: 0 0 18px;
+  padding: 0 0 18px;
+  border-bottom: 1px solid #f1f1f1;
+  width: 330px;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .rt {
+  width: 215px;
+  overflow: hidden;
+  padding: 0 0 0 15px;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .rt .top {
+  padding: 0 0 5px;
+  margin: -2px 0 0;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .rt .top i {
+  scale: 0.65;
+  width: 12px;
+  color: #ea1e1e;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .rt .top p {
+  display: inline-block;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #a3a3a3;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .rt .smltxt {
+  margin: 0 auto 5px;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-family: "Marcellus", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.1s;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .rt .smltxt:hover {
+  color: #c0a483;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .rt .bottom p {
+  color: #c0a483;
+  font-size: 1rem;
+  font-family: "Marcellus", serif;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #cecece;
+  width: 78px;
+  height: 78px;
+  position: relative;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink img {
+  width: 100%;
+  cursor: pointer;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink .mininavs {
+  display: none;
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  z-index: 12;
+  right: 3%;
+  bottom: 14%;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink .mininavs div {
+  transition: 0.3s;
+  margin: 5px 0;
+  border: 1px solid rgba(163, 163, 163, 0.4588235294);
+  padding: 12px;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink .mininavs div:hover {
+  background-color: #c0a483;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink .mininavs div:hover i {
+  transition: 0.3s;
+  color: white;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink .mininavs i {
+  transition: 0.3s;
+  margin: auto;
+  font-size: 1.25rem;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink .mininavs .bag {
+  transform: rotateY(90deg);
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink .mininavs .bag i {
+  font-size: 1.4rem;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink .mininavs .heart {
+  transform: rotateY(90deg);
+  transition-delay: 0.1s;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink .mininavs .search {
+  transform: rotateY(90deg);
+  transition-delay: 0.2s;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink:hover .mininavs div {
+  transform: rotateY(0deg);
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink:hover .fst {
+  opacity: 0;
+  display: none;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink:hover .sec {
+  opacity: 1;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink .discount {
+  font-family: "Marcellus", serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  display: none;
+  width: 50px;
+  height: 25px;
+  background-color: #b12a2a;
+  color: white;
+  z-index: 12;
+  left: 2%;
+  top: 2%;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink .hot {
+  display: none;
+  font-family: "Marcellus", serif;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  display: none;
+  width: 50px;
+  height: 25px;
+  background-color: #c0a483;
+  color: white;
+  z-index: 11;
+  right: 2%;
+  top: 2%;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink .fst {
+  position: absolute;
+  transition: 0.3s;
+}
+.section-3 .s3-all .s3-left .fepro .pro .feproduct .drink .sec {
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s;
+}
 .section-3 .s3-all .s3-right {
   display: inline-block;
   padding: 0 15px;
   width: 75%;
 }
 .section-3 .s3-all .s3-right .s3r-top {
-  margin: -5px 0 20px;
+  margin: -5px 0 45px;
 }
 .section-3 .s3-all .s3-right .s3r-top .s3rt-left {
   color: #868686;
@@ -298,4 +484,239 @@
 .section-3 .s3-all .s3-right .s3r-top .pricefilter i {
   padding: 0 0 0 5px;
   font-size: 10px;
+}
+.section-3 .s3-all .s3-right .s3r-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products {
+  width: 23%;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .top {
+  padding: 7px 0;
+  text-align: center;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .top i {
+  scale: 0.65;
+  width: 12px;
+  color: #ea1e1e;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .top p {
+  display: inline-block;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #a3a3a3;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .smltxt {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-family: "Marcellus", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.1s;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .smltxt:hover {
+  color: #c0a483;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .bottom p {
+  color: #c0a483;
+  font-size: 1rem;
+  font-family: "Marcellus", serif;
+  text-align: center;
+  margin: 10px 0 40px;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto !important;
+  border: 1px solid rgba(163, 163, 163, 0.4588235294);
+  background-size: contain;
+  width: 240px;
+  height: 240px;
+  position: relative;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink img {
+  width: 100%;
+  cursor: pointer;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink .mininavs {
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  z-index: 12;
+  right: 3%;
+  bottom: 14%;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink .mininavs div {
+  transition: 0.3s;
+  margin: 5px 0;
+  border: 1px solid rgba(163, 163, 163, 0.4588235294);
+  padding: 12px;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink .mininavs div:hover {
+  background-color: #c0a483;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink .mininavs div:hover i {
+  transition: 0.3s;
+  color: white;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink .mininavs i {
+  transition: 0.3s;
+  margin: auto;
+  font-size: 1.25rem;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink .mininavs .bag {
+  transform: rotateY(90deg);
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink .mininavs .bag i {
+  font-size: 1.4rem;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink .mininavs .heart {
+  transform: rotateY(90deg);
+  transition-delay: 0.1s;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink .mininavs .search {
+  transform: rotateY(90deg);
+  transition-delay: 0.2s;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink:hover .mininavs div {
+  transform: rotateY(0deg);
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink:hover .fst {
+  opacity: 0;
+  display: none;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink:hover .sec {
+  opacity: 1;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink .discount {
+  font-family: "Marcellus", serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background-color: #b12a2a;
+  color: white;
+  z-index: 12;
+  left: 2%;
+  top: 2%;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink .hot {
+  font-family: "Marcellus", serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background-color: #c0a483;
+  color: white;
+  z-index: 11;
+  right: 2%;
+  top: 2%;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink .fst {
+  position: absolute;
+  transition: 0.3s;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .drink .sec {
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s;
+}
+
+footer {
+  background-color: rgba(134, 134, 134, 0.0784313725);
+}
+footer .foot-all {
+  padding: 50px 0;
+}
+footer a {
+  text-decoration: none;
+}
+footer .ftxt {
+  padding: 0 0 10px 0;
+}
+footer h2 {
+  font-size: 16px;
+  font-family: "Marcellus", serif;
+  padding: 0 0 20px 0;
+}
+footer p {
+  padding: 0 0 10px 0;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #868686;
+}
+footer p strong {
+  color: black;
+}
+footer a {
+  transition: 0.3s !important;
+  display: block;
+  text-decoration: none;
+  padding: 0 0 10px 0;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #868686;
+}
+footer a:hover {
+  color: #c0a483;
+}
+footer a strong {
+  color: black;
+}
+footer .fa-brands {
+  margin: 0 3px;
+}
+footer .fa-twitter {
+  margin: 0 3px 0 0;
+}
+footer .fa-pinterest {
+  margin: 0 0 0 3px;
+}
+footer i {
+  border: 1px solid #a3a3a3;
+  border-radius: 50%;
+  padding: 10px;
+  transition: 0.3s !important;
+}
+footer i:hover {
+  color: white;
+  background-color: #c0a483 !important;
+}
+footer .foot-bottom {
+  padding: 20px 0 10px;
+  border-top: 1px solid rgba(163, 163, 163, 0.4588235294);
+}
+
+a {
+  transition: 0.3s !important;
+}
+a:hover {
+  color: #c0a483;
+}
+
+#myBtn {
+  display: none;
+  transition: 0.3s;
+  position: fixed;
+  z-index: 1232323;
+  right: 30px;
+  bottom: 10px;
+  background-color: #c0a483;
+  padding: 7px 14px;
+}
+#myBtn i {
+  color: white;
 }/*# sourceMappingURL=shop.css.map */
