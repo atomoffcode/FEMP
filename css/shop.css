@@ -719,4 +719,41 @@ a:hover {
 }
 #myBtn i {
   color: white;
+}
+
+.simple-pagination ul {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.simple-pagination li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.simple-pagination li a,
+.simple-pagination li span {
+  color: #868686;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: 1px solid #EEE;
+  background-color: #FFF;
+  border-radius: 0;
+}
+
+.simple-pagination .current {
+  color: #FFF;
+  background-color: black;
+  border-color: #cecece;
+}
+
+.simple-pagination .prev.current,
+.simple-pagination .next.current {
+  background: black;
 }/*# sourceMappingURL=shop.css.map */
