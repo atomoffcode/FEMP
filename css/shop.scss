@@ -264,6 +264,7 @@ $lllgray: #f1f1f1;
                 .c-bottom{
                     .c-ins{
                         &:hover{
+                            
                             .name,.count{
                                 color: black;
                             }
@@ -288,6 +289,9 @@ $lllgray: #f1f1f1;
                         border-radius: 50%;
                         width: 25px;
                         height: 25px;
+                    }
+                    .activecat{
+                        color: black !important;
                     }
 
                 }

@@ -232,6 +232,9 @@
   width: 25px;
   height: 25px;
 }
+.section-3 .s3-all .s3-left .categories .c-bottom .activecat {
+  color: black !important;
+}
 .section-3 .s3-all .s3-left .bottlesize .sizes span, .section-3 .s3-all .s3-left .bottlesize .years span, .section-3 .s3-all .s3-left .vintage .sizes span, .section-3 .s3-all .s3-left .vintage .years span {
   display: inline-block;
   font-size: 14px;

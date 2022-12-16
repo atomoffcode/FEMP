@@ -222,23 +222,122 @@ toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
 
 
 
-var items = $(".s3r-bottom .products");
-    var numItems = items.length;
-    var perPage = 12;
+var products
 
-    items.slice(perPage).hide();
+var catitems = []
 
-    $('#pagination-container').pagination({
-        items: numItems,
-        itemsOnPage: perPage,
-        prevText: "&laquo;",
-        nextText: "&raquo;",
-        onPageClick: function (pageNumber) {
-            var showFrom = perPage * (pageNumber - 1);
-            var showTo = showFrom + perPage;
-            items.hide().slice(showFrom, showTo).show();
-        }
-    });
+
+var cats = document.querySelectorAll('.name')
+cats.forEach(element => {
+  element.addEventListener('click',function(){
+    catitems.push(element.innerHTML.toLocaleLowerCase())
+    console.log(catitems);
+    
+    
+    GetProducts()
+  })
+});
+
+
+
+
+const GetProducts = function() {
+  fetch('/json/product.json')
+    .then((response) => response.json())
+    .then((json) => {
+      
+      products = json
+      console.log(products);
+
+      function catcounts(){
+        var champ = products.filter(x => x.category.includes("champagne")).length
+        var half = products.filter(x => x.category.includes("half bottles")).length
+        var redw = products.filter(x => x.category.includes("red wines")).length
+        var rosew = products.filter(x => x.category.includes("rosé wines")).length
+        var spark = products.filter(x => x.category.includes("sparkling")).length
+        var wwine = products.filter(x => x.category.includes("white wines")).length
+        document.querySelector('#champ span').innerHTML = champ
+        document.querySelector('#half span').innerHTML = half
+        document.querySelector('#redw span').innerHTML = redw
+        document.querySelector('#rosew span').innerHTML = rosew
+        document.querySelector('#spark span').innerHTML = spark
+        document.querySelector('#wwine span').innerHTML = wwine
+        console.log(champ);
+
+      }
+      catcounts()
+
+      
+      if (catitems.length != 0) {
+        products = json.filter(x => x.category.includes(catitems[catitems.length-1]))
+        cats.forEach(function(x){
+          if(catitems[catitems.length-1] == x.innerHTML.toLowerCase()){
+            x.classList.add('activecat')
+          }else{
+            x.classList.remove('activecat')
+          }
+        })
+      }
+
+
+
+      let html = ''
+      products.map(element => {
+        html+= `
+        <div class="products">
+                            
+                            <div class="drink">
+                                <div class="mininavs">
+                                    <div class="bag">
+                                        <i class="fa-solid fa-bag-shopping"></i>
+                                    </div>
+                                    <div class="heart">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                    <div class="search">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                </div>
+                                <div class="discount"><span>-10%</span></div>
+                                <div class="hot"><span>Hot</span></div>
+                                <img class="sec" src="${element.hoverImg}">
+                                <img class="fst" src="${element.img}" alt="">
+                            </div>
+                            <div class="top">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p>{<span>1</span> review)</p>
+                            </div>
+                            <a class="smltxt" href="#">${element.title}</a>
+                            <div class="bottom"><p>$<span>${element.price}</span>.00</p></div>
+                        </div>
+        `
+      });
+      document.getElementById('prods').innerHTML = html;
+      var items = $("#prods .products");
+      var numItems = items.length;
+      var perPage = 12;
+
+      items.slice(perPage).hide();
+
+      $('#pagination-container').pagination({
+          items: numItems,
+          itemsOnPage: perPage,
+          prevText: "&laquo;",
+          nextText: "&raquo;",
+          onPageClick: function (pageNumber) {
+              var showFrom = perPage * (pageNumber - 1);
+              var showTo = showFrom + perPage;
+              items.hide().slice(showFrom, showTo).show();
+          }
+      });
+    })
+    
+}
+GetProducts()
 
 
 
