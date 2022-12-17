@@ -335,7 +335,7 @@ sorts.forEach(x => {
     
     if(!sort.includes(x.id)){
       sorts.forEach(y => {
-        
+        y.classList.remove('activeplacesort')
       })
       sort = []
       x.classList.add('activeplacesort')
