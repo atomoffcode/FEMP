@@ -830,6 +830,41 @@
   transition: 0.3s;
 }
 
+.s3r-middle {
+  display: none;
+  margin: 0 0 25px 0;
+}
+.s3r-middle span {
+  margin: 0 2px 0 0;
+  display: inline-block;
+  background-color: #f1f1f1;
+  border-radius: 40px;
+  padding: 2px 15px;
+}
+.s3r-middle span::after {
+  content: "\f00d";
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  margin: 0 0 0 10px;
+}
+.s3r-middle span:hover {
+  background-color: black;
+  color: white;
+}
+.s3r-middle #clrall {
+  outline: none;
+  border: none;
+  background-color: white;
+  font-size: 14px;
+  border-bottom: 1px solid black;
+}
+.s3r-middle #clrall:hover {
+  border-color: #c0a483;
+  color: #c0a483;
+}
+
 footer {
   background-color: rgba(134, 134, 134, 0.0784313725);
 }

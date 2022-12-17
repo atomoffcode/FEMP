@@ -113,8 +113,8 @@
                         <div class="pr">
                             <div class="range_container">
                                 <div class="sliders_control">
-                                   <input onmouseup="GetProducts()" id="fromSlider" type="range" value="30" min="30" max="350"/>
-                                   <input onmouseup="GetProducts()" id="toSlider" type="range" value="350" min="30" max="350"/>
+                                   <input onmouseup="PriceChange()" id="fromSlider" type="range" value="30" min="30" max="350"/>
+                                   <input onmouseup="PriceChange()" id="toSlider" type="range" value="350" min="30" max="350"/>
                                 </div>
                                 <div class="form_control">
                                   <div class="form_control_container d-flex mt-20px align-items-center">
@@ -348,6 +348,11 @@
 
                             </div>
                         </div>
+                        
+                    </div>
+                    <div class="s3r-middle px-15px">
+                        <div class=" d-inline-block"></div>
+                        <button id="clrall">Clear All</button>
                     </div>
                     <div class="s3r-bottom" id="prods">
                         

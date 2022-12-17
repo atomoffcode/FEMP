@@ -323,7 +323,10 @@ brands.forEach(x => {
 var inputs = document.querySelectorAll('.form_control_container input')
 inputs.forEach(x => x.addEventListener('change',function(){
   GetProducts()
+  
 }))
+
+
 
 var sorts = document.querySelectorAll('.placesort')
 var sort = []
@@ -332,7 +335,7 @@ sorts.forEach(x => {
     
     if(!sort.includes(x.id)){
       sorts.forEach(y => {
-        y.classList.remove('activeplacesort')
+        
       })
       sort = []
       x.classList.add('activeplacesort')
@@ -351,7 +354,90 @@ sorts.forEach(x => {
   })
 })
 
+var DelSpan = function(y){
+  console.log('s');
+  if(y.innerHTML.includes('Cl')){
+    bottlesizes.remove(y.innerHTML.slice(0,-3))
+    botsize.forEach(x => {
+      if(x.innerHTML.includes(y.innerHTML.slice(0,-3))){
+        x.classList.remove('activespan')
+      }
+    })
+  }
+  if(y.innerHTML.includes('20')){
+    vintage.remove(y.innerHTML)
+    vintages.forEach(x => {
+      if(x.innerHTML.includes(y.innerHTML)){
+        x.classList.remove('activespan')
+      }
+    })
+  }
+  if(y.innerHTML.includes('Br')){
+    brands.forEach(x => {
+      x.classList.remove('activespanimg')
+    })
+    brand = []
+  }
+  GetProducts()
+}
 
+var prch = []
+var PriceChange = function(){
+  let fin = document.getElementById('fromInput').value;
+  let tin = document.getElementById('toInput').value;
+  prch.push(fin)
+  prch.push(tin)
+  console.log(prch);
+
+  GetProducts()
+}
+
+const DeleteFilter = function(){
+  var html1 = ''
+  if(prch.length != 0){
+    html1 += `
+      <span onclick="DelSpan(this)">$${prch[prch.length-2]} - $${prch[prch.length-1]}</span>`
+  }
+  if (vintage.length != 0) {
+    vintage.forEach(y=>{
+      html1 += `
+      <span onclick="DelSpan(this)">${y}</span>`
+    })
+  }
+  if (bottlesizes.length != 0) {
+    bottlesizes.forEach(x=>{
+      html1 += `
+      <span onclick="DelSpan(this)">${x} Cl</span>`
+    })
+  }
+  if (brand.length != 0) {
+    brand.forEach(z=>{
+      html1 += `
+      <span onclick="DelSpan(this)">Brand ${brand.indexOf(z)+1}</span>`
+    })
+  }
+  console.log(html1);
+  if (html1.length == 0) {
+    document.querySelector('.s3r-middle').style.display = "none"
+  }else{
+    document.querySelector('.s3r-middle').style.display = "block"
+    document.querySelector('.s3r-middle div').innerHTML = html1
+    
+  }
+}
+
+
+
+document.getElementById('clrall').addEventListener('click',function(){
+  prch = []
+  bottlesizes = []
+  vintage = []
+  brand = []
+  botsize.forEach(x => x.classList.remove('activespan'))
+  vintages.forEach(x => x.classList.remove('activespan'))
+  brands.forEach(x => x.classList.remove('activespanimg'))
+  GetProducts()
+})
 
 
 
@@ -447,6 +533,7 @@ const GetProducts = function() {
 
 
       let html = ''
+      DeleteFilter()
       product4.map(element => {
         html+= `
         <div class="products">
@@ -548,6 +635,7 @@ const GetProducts = function() {
             x.classList.add("productsrow")
           })
         }
+        
       }
       PlaceProducts()
 
