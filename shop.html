@@ -113,8 +113,8 @@
                         <div class="pr">
                             <div class="range_container">
                                 <div class="sliders_control">
-                                   <input id="fromSlider" type="range" value="30" min="30" max="350"/>
-                                   <input id="toSlider" type="range" value="350" min="30" max="350"/>
+                                   <input onmouseup="GetProducts()" id="fromSlider" type="range" value="30" min="30" max="350"/>
+                                   <input onmouseup="GetProducts()" id="toSlider" type="range" value="350" min="30" max="350"/>
                                 </div>
                                 <div class="form_control">
                                   <div class="form_control_container d-flex mt-20px align-items-center">
@@ -155,12 +155,12 @@
                     <div class="brands mb-50px">
                         <h3 style=" margin-bottom: 15px;">Brands</h3>
                         <div class="brand">
-                            <span><img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand1.jpg" alt=""></span>
-                            <span><img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand2.jpg" alt=""></span>
-                            <span><img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand3.jpg" alt=""></span>
-                            <span><img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand4.jpg" alt=""></span>
-                            <span><img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand5.jpg" alt=""></span>
-                            <span><img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand1.jpg" alt=""></span>
+                            <span id="winery"><img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand1.jpg" alt=""></span>
+                            <span id="winehouse"><img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand2.jpg" alt=""></span>
+                            <span id="premium"><img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand3.jpg" alt=""></span>
+                            <span id="highclass"><img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand4.jpg" alt=""></span>
+                            <span id="fortress"><img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand5.jpg" alt=""></span>
+                            <span id="winery"><img src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/05/brand1.jpg" alt=""></span>
                         </div>
                     </div>
                     <div class="fepro mb-50px">
@@ -275,7 +275,7 @@
                         <div class="s3rt-right d-flex align-items-center">
                             <div class="placing ">
                                 <div class="p-all d-flex">
-                                    <div class="fst">
+                                    <div id="fst" class="placesort">
                                         <div class="toplayer">
                                             <span></span>
                                             <span></span>
@@ -289,7 +289,7 @@
                                             <span></span>
                                         </div>
                                     </div>
-                                    <div class="scn">
+                                    <div id="scn" class="placesort">
                                         <div class="toplayer">
                                             <span></span>
                                             <span></span>
@@ -306,7 +306,7 @@
                                             <span></span>
                                         </div>
                                     </div>
-                                    <div class="thr">
+                                    <div id="thr" class="placesort activeplacesort">
                                         <div class="toplayer">
                                             <span></span>
                                             <span></span>
@@ -326,7 +326,7 @@
                                             <span></span>
                                         </div>
                                     </div>
-                                    <div class="frh">
+                                    <div id="frh" class="placesort">
                                         <div class="toplayer d-flex align-items-center">
                                             <span></span>
                                             <span class="spsc"></span>

@@ -250,10 +250,17 @@
   color: black;
   border-color: black;
 }
+.section-3 .s3-all .s3-left .bottlesize .sizes .activespan, .section-3 .s3-all .s3-left .bottlesize .years .activespan, .section-3 .s3-all .s3-left .vintage .sizes .activespan, .section-3 .s3-all .s3-left .vintage .years .activespan {
+  border-color: black;
+  color: black;
+}
 .section-3 .s3-all .s3-left .brands .brand {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.section-3 .s3-all .s3-left .brands .brand .activespanimg {
+  border-color: black;
 }
 .section-3 .s3-all .s3-left .brands .brand span {
   transition: 0.1s;
@@ -435,18 +442,18 @@
   padding: 9px 10px;
   border: 1px solid #cecece;
 }
-.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .fst, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .scn, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .thr {
+.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #fst, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #scn, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #thr {
   padding: 0 10px 0 0;
 }
-.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .fst:hover span, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .scn:hover span, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .thr:hover span {
+.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #fst:hover span, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #scn:hover span, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #thr:hover span {
   background-color: black;
 }
-.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .fst div, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .scn div, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .thr div {
+.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #fst div, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #scn div, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #thr div {
   display: flex;
   width: auto;
   height: auto;
 }
-.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .fst span, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .scn span, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .thr span {
+.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #fst span, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #scn span, .section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #thr span {
   transition: 0.2s;
   margin: 1px;
   display: inline-block;
@@ -454,15 +461,15 @@
   height: 5px;
   background-color: #cecece;
 }
-.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .frh:hover span {
+.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #frh:hover span {
   background-color: black;
 }
-.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .frh div {
+.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #frh div {
   display: flex;
   width: auto;
   height: auto;
 }
-.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .frh span {
+.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #frh span {
   transition: 0.2s;
   margin: 1px;
   display: inline-block;
@@ -470,9 +477,12 @@
   height: 5px;
   background-color: #cecece;
 }
-.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .frh .spsc {
+.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing #frh .spsc {
   height: 1px;
   width: 17px;
+}
+.section-3 .s3-all .s3-right .s3r-top .s3rt-right .placing .p-all .activeplacesort span {
+  background-color: black !important;
 }
 .section-3 .s3-all .s3-right .s3r-top .pricefilter {
   border: 1px solid black;
@@ -489,12 +499,16 @@
   font-size: 10px;
 }
 .section-3 .s3-all .s3-right .s3r-bottom {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .section-3 .s3-all .s3-right .s3r-bottom .products {
-  width: 23%;
+  width: 100%;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .products .tb {
+  display: none;
 }
 .section-3 .s3-all .s3-right .s3r-bottom .products .top {
   padding: 7px 0;
@@ -514,7 +528,7 @@
 .section-3 .s3-all .s3-right .s3r-bottom .products .smltxt {
   margin: 0 auto;
   text-align: center;
-  width: 100%;
+  width: 80%;
   display: block;
   text-decoration: none;
   color: black;
@@ -633,6 +647,184 @@
   transition: 0.3s;
 }
 .section-3 .s3-all .s3-right .s3r-bottom .products .drink .sec {
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow {
+  margin: 0 0 60px;
+  display: grid;
+  grid-template-columns: 33% 66%;
+  width: 100%;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .srt {
+  padding: 0 15px;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .tb a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 11px 30px;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .tb a:hover {
+  background-color: #c0a483;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .tb i {
+  margin: 0 0 0 15px;
+  padding: 14px;
+  border: 1px solid #cecece;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .tb i:hover {
+  color: white;
+  background-color: #c0a483;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .tb p {
+  margin: 35px 0 0;
+  padding: 35px 0 0;
+  font-size: 14px;
+  color: #868686;
+  font-family: "Open Sans", sans-serif;
+  border-top: 1px solid #cecece;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .top {
+  padding: 7px 0;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .top i {
+  scale: 0.65;
+  width: 12px;
+  color: #ea1e1e;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .top p {
+  display: inline-block;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #a3a3a3;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .smltxt {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-family: "Marcellus", serif;
+  letter-spacing: 1px;
+  transition: 0.1s;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .smltxt:hover {
+  color: #c0a483;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .bottom p {
+  color: #c0a483;
+  font-size: 1rem;
+  font-family: "Marcellus", serif;
+  margin: 10px 0 30px;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto !important;
+  border: 1px solid rgba(163, 163, 163, 0.4588235294);
+  background-size: contain;
+  width: 330px;
+  height: 330px;
+  position: relative;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink img {
+  width: 100%;
+  cursor: pointer;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink .mininavs {
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  z-index: 12;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink .mininavs div {
+  transition: 0.3s;
+  margin: 5px 0;
+  border: 1px solid rgba(163, 163, 163, 0.4588235294);
+  padding: 12px;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink .mininavs div:hover {
+  background-color: #c0a483;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink .mininavs div:hover i {
+  transition: 0.3s;
+  color: white;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink .mininavs i {
+  transition: 0.3s;
+  margin: auto;
+  font-size: 1.25rem;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink .mininavs .bag {
+  display: none;
+  transform: rotateY(90deg);
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink .mininavs .bag i {
+  font-size: 1.4rem;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink .mininavs .heart {
+  display: none;
+  transform: rotateY(90deg);
+  transition-delay: 0.1s;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink .mininavs .search {
+  background-color: white;
+  transform: rotateY(90deg);
+  transition-delay: 0.2s;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink:hover {
+  filter: brightness(0.8);
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink:hover .mininavs div {
+  transform: rotateY(0deg);
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink:hover .fst {
+  opacity: 0;
+  display: none;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink:hover .sec {
+  opacity: 1;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink .discount {
+  font-family: "Marcellus", serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background-color: #b12a2a;
+  color: white;
+  z-index: 12;
+  left: 2%;
+  top: 2%;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink .hot {
+  font-family: "Marcellus", serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background-color: #c0a483;
+  color: white;
+  z-index: 11;
+  right: 2%;
+  top: 2%;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink .fst {
+  position: absolute;
+  transition: 0.3s;
+}
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .drink .sec {
   opacity: 0;
   position: absolute;
   transition: 0.3s;

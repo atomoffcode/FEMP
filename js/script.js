@@ -239,6 +239,120 @@ cats.forEach(element => {
 });
 
 
+Array.prototype.remove = function() {
+  var what, a = arguments, L = a.length, ax;
+  while (L && this.length) {
+      what = a[--L];
+      while ((ax = this.indexOf(what)) !== -1) {
+          this.splice(ax, 1);
+      }
+  }
+  return this;
+};
+
+
+
+
+
+var botsize = document.querySelectorAll('.sizes span')
+var bottlesizes = []
+var vintages = document.querySelectorAll('.years span')
+var vintage = []
+var brands = document.querySelectorAll('.brand span')
+var brand = []
+botsize.forEach(x => {
+  x.addEventListener('click',function(){
+    x.classList.toggle('activespan')
+    if(!bottlesizes.includes(x.innerHTML.slice(0,-3))){
+      bottlesizes.push(x.innerHTML.slice(0,-3))
+    }
+    else{
+      bottlesizes.remove(x.innerHTML.slice(0,-3))
+    }
+
+
+    console.log(bottlesizes);
+    
+    
+    GetProducts();
+  })
+})
+
+vintages.forEach(x => {
+  x.addEventListener('click',function(){
+    x.classList.toggle('activespan')
+    if(!vintage.includes(x.innerHTML)){
+      vintage.push(x.innerHTML)
+    }
+    else{
+      vintage.remove(x.innerHTML)
+    }
+
+
+    console.log(vintage);
+    
+    
+    GetProducts();
+  })
+})
+
+brands.forEach(x => {
+  x.addEventListener('click',function(){
+    
+    if(!brand.includes(x.id)){
+      brands.forEach(y => {
+        y.classList.remove('activespanimg')
+      })
+      brand = []
+      x.classList.add('activespanimg')
+      brand.push(x.id)
+    }
+    else{
+      x.classList.remove('activespanimg')
+      brand.remove(x.id)
+    }
+
+
+    console.log(brand);
+    
+    
+    GetProducts();
+  })
+})
+
+var inputs = document.querySelectorAll('.form_control_container input')
+inputs.forEach(x => x.addEventListener('change',function(){
+  GetProducts()
+}))
+
+var sorts = document.querySelectorAll('.placesort')
+var sort = []
+sorts.forEach(x => {
+  x.addEventListener('click',function(){
+    
+    if(!sort.includes(x.id)){
+      sorts.forEach(y => {
+        y.classList.remove('activeplacesort')
+      })
+      sort = []
+      x.classList.add('activeplacesort')
+      sort.push(x.id)
+    }
+    else{
+      x.classList.remove('activeplacesort')
+      sort.remove(x.id)
+    }
+
+
+    console.log(sort);
+    
+    // PlaceProducts()
+    GetProducts();
+  })
+})
+
+
+
 
 
 const GetProducts = function() {
@@ -279,10 +393,61 @@ const GetProducts = function() {
         })
       }
 
+      var product1
+      if(bottlesizes.length!=0){
+        product1 = products.filter(function(x){
+          var ch = true
+          bottlesizes.forEach(function(y){if (!x.bottlesize.includes(y)) {
+            ch = false
+          }})
+          if(ch==true){
+            return x
+          }
+
+        })
+        
+      }else{
+        product1 = products
+      }
+
+      var product2
+      if(vintage.length!=0){
+        product2 = product1.filter(function(x){
+          var ch = true
+          vintage.forEach(function(y){if (!x.vintage.includes(y)) {
+            ch = false
+          }})
+          if(ch==true){
+            return x
+          }
+
+        })
+        
+      }else{
+        product2 = product1
+      }
+      
+      var product3
+      if(brand.length != 0){
+        product3 = product2.filter(x => x.brand.includes(brand))
+      }else{
+        product3 = product2
+      }
+
+      console.log(product3);
+
+
+      var frominput = document.getElementById('fromInput').value
+      var toinput = document.getElementById('toInput').value
+      var product4 = product3.filter(x => Number(x.price)>=Number(frominput) && Number(x.price)<=Number(toinput))
+
+      document.querySelector(".s3rt-left").innerHTML = `Showing ${product4.length} item(s)`
+      
+      
 
 
       let html = ''
-      products.map(element => {
+      product4.map(element => {
         html+= `
         <div class="products">
                             
@@ -303,6 +468,7 @@ const GetProducts = function() {
                                 <img class="sec" src="${element.hoverImg}">
                                 <img class="fst" src="${element.img}" alt="">
                             </div>
+                            <div class="srt">
                             <div class="top">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -310,9 +476,16 @@ const GetProducts = function() {
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <p>{<span>1</span> review)</p>
+                                
                             </div>
                             <a class="smltxt" href="#">${element.title}</a>
                             <div class="bottom"><p>$<span>${element.price}</span>.00</p></div>
+                            <div class="tb">
+                                <a href="#">ADD TO CART</a>
+                                <i class="fa-regular fa-heart"></i>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis…</p>
+                                </div>
+                            </div>
                         </div>
         `
       });
@@ -322,6 +495,62 @@ const GetProducts = function() {
       var perPage = 12;
 
       items.slice(perPage).hide();
+
+
+      const PlaceProducts = function(){
+        if (sort[0]=="thr") {
+          
+          var proddrink = document.querySelectorAll(".products")
+          proddrink.forEach(x => {
+            x.classList.remove("productsrow")
+            x.classList.add("products")
+          })
+          document.querySelector('.s3r-bottom').style.gridTemplateColumns = "25% 25% 25% 25%"
+          var drink = document.querySelectorAll(".products .drink")
+          drink.forEach(x => {
+            x.style.width = "240px"
+            x.style.height = "240px"
+          })
+          
+        }else if(sort[0]=="scn"){
+          
+          var proddrink = document.querySelectorAll(".products")
+          proddrink.forEach(x => {
+            x.classList.remove("productsrow")
+            x.classList.add("products")
+          })
+          document.querySelector('.s3r-bottom').style.gridTemplateColumns = "33% 33% 33%"
+          var drink = document.querySelectorAll(".products .drink")
+          drink.forEach(x => {
+            x.style.width = "330px"
+            x.style.height = "330px"
+          })
+          
+        }else if(sort[0]=="fst"){
+          
+          var proddrink = document.querySelectorAll(".products")
+          proddrink.forEach(x => {
+            x.classList.remove("productsrow")
+            x.classList.add("products")
+          })
+          document.querySelector('.s3r-bottom').style.gridTemplateColumns = "50% 50%"
+          var drink = document.querySelectorAll(".products .drink")
+          drink.forEach(x => {
+            x.style.width = "510px"
+            x.style.height = "510px"
+          })
+          
+        }else if(sort[0]=="frh"){
+          document.querySelector('.s3r-bottom').style.gridTemplateColumns = "100%"
+          var proddrink = document.querySelectorAll(".products")
+          proddrink.forEach(x => {
+            x.classList.remove("products")
+            x.classList.add("productsrow")
+          })
+        }
+      }
+      PlaceProducts()
+
 
       $('#pagination-container').pagination({
           items: numItems,
