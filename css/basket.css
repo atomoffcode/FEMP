@@ -114,6 +114,15 @@
 .box-all .box-left {
   width: 75%;
 }
+.box-all .box-left .bl-top p {
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #868686;
+}
+.box-all .box-left .bl-top p:hover {
+  color: black;
+}
 .box-all .box-right {
   width: 25%;
 }
@@ -158,6 +167,7 @@
   width: 100%;
 }
 .productsrow .xbtn {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,6 +188,12 @@
   padding: 0 15px;
   width: 100%;
 }
+.productsrow .tb .lft span, .productsrow .tb .lft i {
+  cursor: pointer;
+}
+.productsrow .tb .counter i {
+  cursor: pointer;
+}
 .productsrow .tb .counter span {
   margin: 0 0 0 15px;
 }
@@ -189,12 +205,12 @@
 .productsrow .tb .counter p span {
   margin: 0;
 }
-.productsrow .tb span {
+.productsrow .tb .bin {
   color: white;
   background-color: black;
   padding: 12px 30px;
 }
-.productsrow .tb span:hover {
+.productsrow .tb .bin:hover {
   background-color: #c0a483;
 }
 .productsrow .tb i {
