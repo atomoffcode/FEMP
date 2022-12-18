@@ -341,10 +341,10 @@ sorts.forEach(x => {
       x.classList.add('activeplacesort')
       sort.push(x.id)
     }
-    else{
-      x.classList.remove('activeplacesort')
-      sort.remove(x.id)
-    }
+    // else{
+    //   x.classList.remove('activeplacesort')
+    //   sort.remove(x.id)
+    // }
 
 
     console.log(sort);
