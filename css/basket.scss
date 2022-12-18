@@ -219,12 +219,12 @@ margin: 0 0 60px;
                                 }
                             }
                         }
-                        a{
-                            display: inline-block;
-                            text-decoration: none;
+                        span{
+                            
+                            
                             color: white;
                             background-color: black;
-                            padding: 11px 30px;
+                            padding: 12px 30px;
                             &:hover{
                                 background-color: $lightbrown;
                             }

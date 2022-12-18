@@ -812,12 +812,12 @@ $lllgray: #f1f1f1;
                     }
                     .tb{
                         // display: none;
-                        a{
-                            display: inline-block;
-                            text-decoration: none;
+                        span{
+                            /* display: inline-block;
+                            text-decoration: none; */
                             color: white;
                             background-color: black;
-                            padding: 11px 30px;
+                            padding: 12px 30px;
                             &:hover{
                                 background-color: $lightbrown;
                             }

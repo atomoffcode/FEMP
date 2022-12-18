@@ -660,14 +660,14 @@
 .section-3 .s3-all .s3-right .s3r-bottom .productsrow .srt {
   padding: 0 15px;
 }
-.section-3 .s3-all .s3-right .s3r-bottom .productsrow .tb a {
-  display: inline-block;
-  text-decoration: none;
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .tb span {
+  /* display: inline-block;
+  text-decoration: none; */
   color: white;
   background-color: black;
-  padding: 11px 30px;
+  padding: 12px 30px;
 }
-.section-3 .s3-all .s3-right .s3r-bottom .productsrow .tb a:hover {
+.section-3 .s3-all .s3-right .s3r-bottom .productsrow .tb span:hover {
   background-color: #c0a483;
 }
 .section-3 .s3-all .s3-right .s3r-bottom .productsrow .tb i {

@@ -189,14 +189,12 @@
 .productsrow .tb .counter p span {
   margin: 0;
 }
-.productsrow .tb a {
-  display: inline-block;
-  text-decoration: none;
+.productsrow .tb span {
   color: white;
   background-color: black;
-  padding: 11px 30px;
+  padding: 12px 30px;
 }
-.productsrow .tb a:hover {
+.productsrow .tb span:hover {
   background-color: #c0a483;
 }
 .productsrow .tb i {
