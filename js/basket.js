@@ -2,12 +2,13 @@ function GetItems() {
     let basket = JSON.parse(localStorage.getItem('bproducts'));
 
     if(basket.length == 0) {
-        // document.getElementById('empty').classList.remove('d-none')
+        document.getElementById('empty').classList.remove('d-none')
         // document.getElementById('btn_delete').style.display = 'none'
         // document.getElementById('ttl').style.display = 'none'
         document.getElementById('boxes').style.display = 'none'
     }
     else{
+        document.getElementById('empty').classList.add('d-none')
         document.getElementById('boxes').style.display = 'flex'
 
         // document.querySelector('.table').classList.remove('d-none')
