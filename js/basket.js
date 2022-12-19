@@ -144,3 +144,21 @@ var Plus = function(x){
     localStorage.setItem('bproducts',JSON.stringify(basket));
     GetItems()
 }
+
+
+$(window).scroll(function() {
+    if ($("html,body").scrollTop() > 20) {
+        $('#myBtn').fadeIn(400);
+        $('#myBtn').css("bottom","70px")
+    } else {
+        $('#myBtn').fadeOut(400);
+        $('#myBtn').css("bottom","10px")
+
+    }
+});
+
+$("#myBtn").click(function() {
+    $("html, body").animate({
+        scrollTop: 0
+    }, 300);
+});

@@ -1157,6 +1157,34 @@ a{
 
 }
 
+.navspans{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-family: $marcellus;
+    position: relative;
+    &::before{
+        position: absolute;
+        bottom: 0;
+        content: "";
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        width: 0;
+        height: 1px;
+        background: #000;
+    }
+    &:hover{
+        // color: black;
+        &::before{
+            width: 100%;
+        }
+    }
+}
 
 
 

@@ -20,6 +20,34 @@ $lllgray: #f1f1f1;
     width: 1440px !important;
     margin: auto;
 }
+.navspans{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-family: $marcellus;
+    position: relative;
+    &::before{
+        position: absolute;
+        bottom: 0;
+        content: "";
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        width: 0;
+        height: 1px;
+        background: #000;
+    }
+    &:hover{
+        // color: black;
+        &::before{
+            width: 100%;
+        }
+    }
+}
 
 .navi{
     
@@ -730,3 +758,18 @@ a{
 
 
 
+#myBtn{
+    // opacity: 0;
+    display: none;
+    transition: .3s;
+    position: fixed;
+    z-index: 1232323;
+    right: 30px;
+    bottom: 10px;
+    background-color: #c0a483;
+    i{
+        color: white;
+    }
+    padding: 7px 14px;
+
+}

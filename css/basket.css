@@ -19,6 +19,30 @@
   margin: auto;
 }
 
+.navspans {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-family: "Marcellus", serif;
+  position: relative;
+}
+.navspans::before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  width: 0;
+  height: 1px;
+  background: #000;
+}
+.navspans:hover::before {
+  width: 100%;
+}
+
 .navi {
   display: inline-block;
   margin: 0 0 0 5px;
@@ -609,4 +633,18 @@ a {
 }
 a:hover {
   color: #c0a483;
+}
+
+#myBtn {
+  display: none;
+  transition: 0.3s;
+  position: fixed;
+  z-index: 1232323;
+  right: 30px;
+  bottom: 10px;
+  background-color: #c0a483;
+  padding: 7px 14px;
+}
+#myBtn i {
+  color: white;
 }/*# sourceMappingURL=basket.css.map */

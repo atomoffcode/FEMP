@@ -951,6 +951,30 @@ a:hover {
   color: white;
 }
 
+.navspans {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-family: "Marcellus", serif;
+  position: relative;
+}
+.navspans::before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  width: 0;
+  height: 1px;
+  background: #000;
+}
+.navspans:hover::before {
+  width: 100%;
+}
+
 .simple-pagination ul {
   margin: 0 0 20px;
   padding: 0;
