@@ -1,3 +1,23 @@
+// document.getElementById('shoppage').addEventListener('mouseover',()=>{
+//   document.querySelector('.shopdropdown').style.display = 'grid'
+//   // console.log('ads');
+// })
+// document.getElementById('shoppage').addEventListener('mouseleave',()=>{
+//   document.querySelector('.shopdropdown').style.display = 'none'
+//   // console.log('ads');
+// })
+// document.querySelector('.shopdropdown').addEventListener('mouseover',()=>{
+//   document.querySelector('.shopdropdown').style.display = 'grid'
+//   // console.log('ads');
+// })
+// document.querySelector('.shopdropdown').addEventListener('mouseleave',()=>{
+//   document.querySelector('.shopdropdown').style.display = 'none'
+//   // console.log('ads');
+// })
+
+
+
+
 if(localStorage.getItem('bproducts') === null) {
   localStorage.setItem('bproducts',JSON.stringify([]))
 }

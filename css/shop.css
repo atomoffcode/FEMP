@@ -35,6 +35,267 @@
 .section-1-header .head-2 .h2left, .section-1-header .head-2 .h2middle, .section-1-header .head-2 .h2right {
   width: 33%;
 }
+.section-1-header .head-2 .h2middle .menudropdown {
+  position: relative;
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.section-1-header .head-2 .h2middle .menudropdown .normal {
+  position: relative;
+}
+.section-1-header .head-2 .h2middle .menudropdown .normal:hover div {
+  visibility: visible;
+  opacity: 1;
+  top: 25px;
+}
+.section-1-header .head-2 .h2middle #shoppage {
+  position: static;
+}
+.section-1-header .head-2 .h2middle #shoppage:hover .shopdropdown {
+  display: inline-block;
+}
+.section-1-header .head-2 .h2middle #productpage {
+  position: static;
+}
+.section-1-header .head-2 .h2middle #productpage:hover .productdropdown {
+  display: inline-block;
+}
+.section-1-header .head-2 .h2middle #blogpage {
+  position: static;
+}
+.section-1-header .head-2 .h2middle #blogpage:hover .blogdropdown {
+  display: inline-block;
+}
+.section-1-header .head-2 .h2middle .homedropdown {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+  transition: 0.1s ease-in;
+  background-color: white;
+  box-shadow: 0 0 1px #000;
+  z-index: 333;
+  width: 220px;
+  left: 20px;
+  top: 40px;
+  padding: 20px 0;
+  position: absolute;
+}
+.section-1-header .head-2 .h2middle .homedropdown ul {
+  line-height: 35px;
+  list-style-type: none;
+}
+.section-1-header .head-2 .h2middle .homedropdown ul li {
+  font-size: 14px;
+  font-family: "Marcellus", serif;
+}
+.section-1-header .head-2 .h2middle .homedropdown ul li a {
+  margin: 0;
+  padding: 0;
+  color: #868686;
+}
+.section-1-header .head-2 .h2middle .homedropdown ul li a:hover {
+  color: #c0a483;
+}
+.section-1-header .head-2 .h2middle .pagedropdown {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+  transition: 0.1s ease-in;
+  background-color: white;
+  background-color: white;
+  box-shadow: 0 0 1px #000;
+  z-index: 333;
+  width: 220px;
+  left: 20px;
+  top: 40px;
+  padding: 20px 0;
+  position: absolute;
+}
+.section-1-header .head-2 .h2middle .pagedropdown ul {
+  line-height: 35px;
+  list-style-type: none;
+}
+.section-1-header .head-2 .h2middle .pagedropdown ul li {
+  font-size: 14px;
+  font-family: "Marcellus", serif;
+}
+.section-1-header .head-2 .h2middle .pagedropdown ul li a {
+  margin: 0;
+  padding: 0;
+  color: #868686;
+}
+.section-1-header .head-2 .h2middle .pagedropdown ul li a:hover {
+  color: #c0a483;
+}
+.section-1-header .head-2 .h2middle .shopdropdown {
+  display: none;
+  position: absolute;
+  z-index: 3333;
+  top: 100%;
+  left: -33%;
+  padding: 30px 0 0;
+}
+.section-1-header .head-2 .h2middle .shopdropdown .ovrl {
+  padding: 40px 80px;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  background-color: white;
+  box-shadow: 0 0 1px #000;
+  font-family: "Marcellus", serif;
+  font-size: 14px;
+}
+.section-1-header .head-2 .h2middle .shopdropdown .ovrl h3 {
+  font-size: 14px;
+  line-height: 35px;
+  position: relative;
+  margin: 0 0 15px;
+  color: black;
+}
+.section-1-header .head-2 .h2middle .shopdropdown .ovrl h3::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 1px;
+  background-color: #c0a483;
+  bottom: 0;
+}
+.section-1-header .head-2 .h2middle .shopdropdown .ovrl a {
+  padding: 0;
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 35px;
+  color: #868686;
+}
+.section-1-header .head-2 .h2middle .shopdropdown .ovrl a:hover {
+  color: #c0a483;
+}
+.section-1-header .head-2 .h2middle .productdropdown {
+  display: none;
+  position: absolute;
+  z-index: 3333;
+  top: 100%;
+  left: -33%;
+  padding: 30px 0 0;
+}
+.section-1-header .head-2 .h2middle .productdropdown .ovrl {
+  padding: 40px 80px;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  background-color: white;
+  box-shadow: 0 0 1px #000;
+  font-family: "Marcellus", serif;
+  font-size: 14px;
+}
+.section-1-header .head-2 .h2middle .productdropdown .ovrl h3 {
+  font-size: 14px;
+  line-height: 35px;
+  position: relative;
+  margin: 0 0 15px;
+  color: black;
+}
+.section-1-header .head-2 .h2middle .productdropdown .ovrl h3::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 1px;
+  background-color: #c0a483;
+  bottom: 0;
+}
+.section-1-header .head-2 .h2middle .productdropdown .ovrl a {
+  padding: 0;
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 35px;
+  color: #868686;
+}
+.section-1-header .head-2 .h2middle .productdropdown .ovrl a:hover {
+  color: #c0a483;
+}
+.section-1-header .head-2 .h2middle .blogdropdown {
+  display: none;
+  position: absolute;
+  z-index: 3333;
+  top: 100%;
+  left: -33%;
+  padding: 30px 0 0;
+}
+.section-1-header .head-2 .h2middle .blogdropdown .ovrl {
+  padding: 40px 80px;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+  background-color: white;
+  box-shadow: 0 0 1px #000;
+  font-family: "Marcellus", serif;
+  font-size: 14px;
+}
+.section-1-header .head-2 .h2middle .blogdropdown .ovrl h3 {
+  font-size: 14px;
+  line-height: 35px;
+  position: relative;
+  margin: 0 0 15px;
+  color: black;
+}
+.section-1-header .head-2 .h2middle .blogdropdown .ovrl h3::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 1px;
+  background-color: #c0a483;
+  bottom: 0;
+}
+.section-1-header .head-2 .h2middle .blogdropdown .ovrl a {
+  padding: 0;
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 35px;
+  color: #868686;
+}
+.section-1-header .head-2 .h2middle .blogdropdown .ovrl a:hover {
+  color: #c0a483;
+}
+.section-1-header .head-2 .h2middle .blogdropdown .ovrl img {
+  max-width: 125px;
+}
+.section-1-header .head-2 .h2middle .blogdropdown .ovrl .post {
+  margin: 0 0 20px;
+}
+.section-1-header .head-2 .h2middle .blogdropdown .ovrl .pr {
+  margin: 0 0 0 30px;
+}
+.section-1-header .head-2 .h2middle .blogdropdown .ovrl .spa {
+  cursor: pointer;
+  line-height: 16px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+.section-1-header .head-2 .h2middle .blogdropdown .ovrl .spa:hover {
+  color: #c0a483;
+}
+.section-1-header .head-2 .h2middle .blogdropdown .ovrl .spp {
+  line-height: 35px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #868686;
+}
+.section-1-header .head-2 .h2middle a {
+  display: flex;
+  align-items: center;
+}
+.section-1-header .head-2 .h2middle a i {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  font-size: 7px;
+  font-weight: bold;
+}
 .section-1-header .head-2 a {
   font-size: 14px;
   padding: 0 20px;
