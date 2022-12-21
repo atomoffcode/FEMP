@@ -33,6 +33,12 @@ $lllgray: #f1f1f1;
 .section-1-header{
     padding: 15px 0;
     .head-2{
+        .head-2-all{
+            .menuhamb{
+                display: none;
+                width: 33%;
+            }
+        }
         .h2left,.h2middle,.h2right{
             width: 33%;
         }
@@ -742,6 +748,7 @@ $lllgray: #f1f1f1;
                         }
                     }
                     .drink{
+                        // overflow: hidden;
                         object-fit: cover;
                         img{
                             width: 100%;
@@ -759,13 +766,13 @@ $lllgray: #f1f1f1;
                         .mininavs{
                             display: none;
                             cursor: pointer;
-                
                             overflow: hidden;
                             position: absolute;
                             z-index: 12;
                             right: 3%;
                             bottom: 14%;
                             div{
+                                background-color: white !important;
                                 
                                 transition: .3s;
                                 margin: 5px 0;
@@ -780,6 +787,7 @@ $lllgray: #f1f1f1;
                                 }
                             }
                             i{
+                                
                                 transition: .3s;
                                 margin: auto;
                                 font-size: 1.25rem;
@@ -876,12 +884,17 @@ $lllgray: #f1f1f1;
             padding: 0 15px;
             width: 75%;
             .s3r-top{
+                justify-content: space-between;
                 margin: -5px 0 45px;
-                .s3rt-left{
-                    color: #868686;
-                    font-size: 14px;
-                    font-family: $opensans;
-                    // margin: 8px 10px 0 0;
+                #parametr{
+                    display: none;
+                    i{
+                        padding: 5px;
+                        border: 2px solid black;
+                        &::before{
+                            font-size: 20px;
+                        }
+                    }
                 }
                 .s3rt-right{
                     .placing{
@@ -1361,6 +1374,13 @@ $lllgray: #f1f1f1;
         }
     }
 }
+.s3rt-left{
+    display: block;
+    color: #868686;
+    font-size: 14px;
+    font-family: $opensans;
+    // margin: 8px 10px 0 0;
+}
 .s3r-middle{
     display: none;
     margin: 0 0 25px 0;
@@ -1493,6 +1513,23 @@ a{
 
 }
 
+#bottommenu{
+    height: 50px;
+    background-color: white;
+    border-top: 1px solid #f1f1f1;
+    width: 100%;
+    display: none;
+    div{
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    position: fixed;
+    bottom: 0;
+    z-index: 1312312312;
+}
+
 .navspans{
     display: inline-block;
     display: flex;
@@ -1569,8 +1606,291 @@ a{
 
 
 
+      @media (min-width:1500px) {
+        .mycontainer{
+            max-width: 1440px !important;
+        }
+    }
+    @media (max-width:1499px) {
+        
+        .section-3{
+            .s3-all{
+                .s3-right{
+                    .s3r-bottom{
+                        .products{
+                            .drink{
+                                width: 180px;
+                                height: 180px;
+                            }
+                        }
+                        .productsrow{
+                            .drink{
+                                width: 240px;
+                                height: 240px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:1440px) {
+        .mycontainer{
+            max-width: 90% !important;
+        }
+        .slider3{
+            .drink{
+                width: 290px;
+                height: 290px;
+            }
+        }
+    }
+    @media (max-width:1200px) {
+        .s3rt-left{
+            display: none;
+            
+        }
+        .mycontainer{
+            max-width: 100% !important;
+            width: 98% !important;
+        }
+        .section-3{
+            .s3-all{
+                .s3-left{
+                    display: none;
+                }
+                .s3-right{
+                    width: 100%;
+                    .s3r-top{
+                        #parametr{
+                            display: block;
+                        }
+                        .s3rt-right{
+                            .placing{
+                                display: none;
+                            }
+                        }
+                    }
+                    .s3r-bottom{
+                        .products{
+                            .drink{
+                                width: 240px;
+                                height: 240px;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:1060px) {
+        .section-3{
+            .s3-all{
+                .s3-right{
+                    .s3r-bottom{
+                        grid-template-columns: 33% 33% 33%;
+                        .products{
+                            .drink{
+                                width: 300px;
+                                height: 300px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-
+    @media (max-width:991px) {
+        .section-3{
+            .s3-all{
+                .s3-right{
+                    .s3r-top{
+                        .s3rt-right{
+                            .placing{
+                                display: none;
+                            }
+                        }
+                    }
+                    .s3r-bottom{
+                        grid-template-columns: 33% 33% 33%;
+                        .products{
+                            .drink{
+                                width: 230px;
+                                height: 230px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            .foot-bottom{
+                margin-bottom: 50px;
+            }
+        }
+        #bottommenu{
+            display: flex;
+        }
+        html{
+            width: 100%;
+        }
+        
+        
+        header{
+            display: none;
+        }
+        .section-1-header{
+            .head-2{
+                .head-2-all{
+                    .menuhamb{
+                        display: block;
+                    }
+                    
+                        #navis{
+                            display: none  !important;
+                        }
+                    .h2left{
+                        .logo{
+                            margin: 0 auto;
+                        }
+                    }
+                    .h2right{
+                        #reslogin{
+                            display: none !important;
+                        }
+                        .navs-2{
+                            #resnav2ico{
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // .slider3{
+        //     .drink{
+        //         width: 240px;
+        //         height: 240px;
+        //     }
+        // }
+        // .section-2{
+        //     .mycontainer{
+        //         .slider2{
+        //             .drink{
+        //                 width: 400px;
+        //                 height: 400px;
+        //                 img{
+        //                     width: 400px;
+        //                     height: 400px;
+        //                 }
+    
+        //             }
+        //             .slick-list{
+        //                 .slick-track{
+        //                     height: 700px;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        // .section-4{
+        //     .s4-middle{
+        //         .s4m-all{
+        //             div{
+        //                 &:nth-child(4){
+        //                     display: none !important;
+        //                 }
+        //                 &:nth-child(5){
+        //                     display: none !important;
+        //                 }
+        //                 width: 33%;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+    @media (max-width:767px) {
+        .section-3{
+            .s3-all{
+                .s3-right{
+                    .s3r-top{
+                        .s3rt-right{
+                            .placing{
+                                display: none;
+                            }
+                        }
+                    }
+                    .s3r-bottom{
+                        grid-template-columns: 55% 55%;
+                        .products{
+                            .drink{
+                                width: 350px;
+                                height: 350px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            .foot-all{
+                .mycontainer{
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+    @media (max-width:700px) {
+        .section-3{
+            .s3-all{
+                .s3-right{
+                    .s3r-top{
+                        .s3rt-right{
+                            .placing{
+                                display: none;
+                            }
+                        }
+                    }
+                    .s3r-bottom{
+                        grid-template-columns: 55% 55%;
+                        .products{
+                            .drink{
+                                width: 320px;
+                                height: 320px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:630px) {
+        .section-3{
+            .s3-all{
+                .s3-right{
+                    .s3r-top{
+                        .s3rt-right{
+                            .placing{
+                                display: none;
+                            }
+                        }
+                    }
+                    .s3r-bottom{
+                        grid-template-columns: 55% 55%;
+                        .products{
+                            .drink{
+                                width: 270px;
+                                height: 270px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 
 

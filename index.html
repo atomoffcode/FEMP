@@ -16,8 +16,18 @@
     <script src="https://kit.fontawesome.com/1ec4b5e78d.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="bottommenu">
+        <div><i class="fa-solid fa-store"></i></div>
+        <div><i class="fa-regular fa-user"></i></div>
+        <div><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div><i class="fa-regular fa-heart"></i></div>
+    </div>
+    <div id="myBtn">
+        <i class="fa-sharp fa-solid fa-angle-up"></i>
+    </div>
+
     <header>
-        <div class="container">
+        <div class="mycontainer">
         <div class="head-all d-flex justify-content-between align-items-center">
             <div class="left d-flex">
                 <div class="lleft d-flex align-items-center">
@@ -40,13 +50,17 @@
         </div>
     </header>
     <div class="section-1-header">
-        <div class="container">
+        <div class="mycontainer">
             <div class="head-2">
-                <div class="head-2-all d-flex justify-content-between align-items-center">
+                <div class="head-2-all d-flex justify-content-between">
+                    <div class="menuhamb">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
                     <div class="h2left d-flex align-items-center">
+                        
                         <div class="logo d-flex align-items-center">
                             <a href="/index.html"><img width="400" height="78" src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/06/logo.png.webp" alt="Kowine – Wine Store WooCommerce Theme" data-lazy-src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/06/logo.png.webp" data-ll-status="loaded" class="entered lazyloaded"></a>                    </div>
-                        <div class="navs d-flex ">
+                        <div id="navis" class="navs d-flex ">
                             <ul class="menudropdown">
                                 <li class="normal"><a href=""><span class="navspans" id="homepage">HOME</span><i class="navi fa-solid fa-angle-down"></i></a>
                                     <div class="homedropdown">
@@ -264,12 +278,12 @@
                         </div>
                     </div>
                     <div class="h2right d-flex align-items-center">
-                        <div class="login d-flex align-items-center">
+                        <div id="reslogin" class="login d-flex align-items-center">
                             <a href="#">LOGIN / REGISTER</a>
                         </div>
                         <div class="navs-2">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <i class="fa-regular fa-heart"></i>
+                            <i id="resnav2ico" class="fa-solid fa-magnifying-glass"></i>
+                            <i id="resnav2ico" class="fa-regular fa-heart"></i>
                             <a href="/basket.html"><i class="fa-solid fa-bag-shopping"><span id="shopcartcount">0</span></i></a>
                         </div>
                     </div>
@@ -279,16 +293,16 @@
 
     </div>
     <div class="section-1 mb-60px">
-        <div class="container">
+        <div class="mycontainer">
             <div class="slider" >
                 <div id="shampane"><img id="shamp" src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/06/bg-breadcrumb.jpg" alt=""><img id="henkell" src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/06/img-slide4.png" alt=""><img id="glass2" src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/06/img-slide3.png" alt=""><img id="chapellet" src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/06/img-slide5.png" alt=""><div class="txtarea"><p class="ptop">CHAMPAGNE & FIZZ</p><p class="pbot">Explore the diversity of one of our favorite wine regions.</p><a href="">SHOP NOW</a></div></div>
                 <div id="nature"><img id="wineyard" src="https://images7.alphacoders.com/443/443368.jpg" alt=""><img id="blackelk" src="https://images.squarespace-cdn.com/content/v1/5ae34ec6ec4eb786597e200d/1526446315999-R14M0ZD0DBPYWFT4W268/Chardonnay+png.png?format=1000w" alt=""><img id="cabernet" src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/06/img-slide2-1.png" alt=""><img id="glass" src="https://wpbingosite.com/wordpress/kowine/wp-content/uploads/2021/06/img-slide3.png" alt=""><div class="txtarea"><p class="ptop">SPRING DELIGHT RED</p><p class="pbot">Explore the diversity of one of our favorite wine regions.</p><a href="">SHOP NOW</a></div></div>
             </div>
-            <div class="shopbycategory container-fluid">
+            <div class="shopbycategory mycontainer-fluid">
                 <div class="txt pt-50px pb-30px d-flex align-items-center">
                     <h4 class="mx-auto">SHOP BY <span>CATEGORY</span></h4>
                 </div>
-                <div class="drinks row justify-content-between">
+                <div class="drinks justify-content-between">
                     <div><img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/06/banner39.jpg.webp" alt=""><div class="txts"><h5>RED WINE</h5></div></div>
                     <div><img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/06/banner39.jpg.webp" alt=""><div class="txts"><h5>RED WINE</h5></div></div>
                     <div><img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/06/banner39.jpg.webp" alt=""><div class="txts"><h5>RED WINE</h5></div></div>
@@ -298,13 +312,13 @@
         </div>
     </div>
     <div class="section-2 w-100">
-        <div class="container pb-30px">
+        <div class="mycontainer pb-30px">
             <div class="txt pt-50px pb-30px d-flex align-items-center">
                 <h4 class="mx-auto">FEATURED <span>PRODUCTS</span></h4>
             </div>
             <div class="slider2">
                 <div>
-                    <div class="drink">
+                    <div class="drink mx-auto">
                         <div class="mininavs">
                             <span class=" d-none">10</span>
                             <div class="bag" onclick="AddBasket(this)">
@@ -334,7 +348,7 @@
                     <div class="bottom"><p>$<span>100.00</span></p></div>
                 </div>
                 <div>
-                    <div class="drink">
+                    <div class="drink mx-auto">
                         <div class="mininavs">
                             <span class=" d-none">10</span>
                             <div class="bag" onclick="AddBasket(this)">
@@ -364,7 +378,7 @@
                     <div class="bottom"><p>$<span>100.00</span></p></div>
                 </div>
                 <div>
-                    <div class="drink">
+                    <div class="drink mx-auto">
                         <div class="mininavs">
                             <span class=" d-none">10</span>
                             <div class="bag" onclick="AddBasket(this)">
@@ -394,7 +408,7 @@
                     <div class="bottom"><p>$<span>100.00</span></p></div>
                 </div>
                 <div>
-                    <div class="drink">
+                    <div class="drink mx-auto">
                         <div class="mininavs">
                             <span class=" d-none">10</span>
                             <div class="bag" onclick="AddBasket(this)">
@@ -424,8 +438,7 @@
                     <div class="bottom"><p>$<span>100.00</span></p></div>
                 </div>
                 <div>
-                    <div class="drink">
-                        <div class="mininavs">
+                    <div class="drink mx-auto          <div class="mininavs">
                             <span class=" d-none">10</span>
                             <div class="bag" onclick="AddBasket(this)">
                                 <i class="fa-solid fa-bag-shopping"></i>
@@ -457,7 +470,7 @@
         </div>
     </div>
     <div class="section-3">
-        <div class="container">
+        <div class="mycontainer">
             <div class="s3-top">
                 <div class="s3-top-all">
                     <h2 style="font-size: 34px;">HANDPICKED WINES, UNMISSABLE DEALS, <span>UP TO 80% DISCOUNT</span></h2>
@@ -625,17 +638,17 @@
                     </div>
                 </div>
                 <div class="s3-middle-bottom">
-                    <div class="s3mb-all d-flex">
-                        <div class="s3mb col-lg-3"><div class="topall">
+                    <div id="s3mball" class="s3mb-all d-flex">
+                        <div class="s3mb "><div class="topall">
                             <div class="topsvg"><div class="svg"><svg xmlns="http://www.w3.org/2000/svg" height="512pt" viewBox="0 -57 512 512" width="512pt"><path d="m506.8125 95.679688-172-94.445313c-2.996094-1.644531-6.628906-1.644531-9.625 0l-64.679688 35.515625c-1.460937.40625-2.824218 1.152344-3.980468 2.183594l-103.339844 56.746094c-3.199219 1.757812-5.1875 5.117187-5.1875 8.765624v20.445313h-115.375c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h115.375v36h-57.332031c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h57.332031v52h-84c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h84v20.449219c0 3.648437 1.988281 7.007812 5.1875 8.765625l172 94.445312c1.5.824219 3.15625 1.234375 4.8125 1.234375s3.3125-.410156 4.8125-1.234375l172-94.445312c3.199219-1.757813 5.1875-5.117188 5.1875-8.765625v-44.78125c0-5.519532-4.476562-10-10-10s-10 4.480468-10 10v38.863281l-152 83.464844v-166.078125l48.339844-26.542969v42.125c0 3.539063 1.867187 6.8125 4.910156 8.609375 1.566406.925781 3.328125 1.390625 5.089844 1.390625 1.65625 0 3.316406-.410156 4.820312-1.238281l36.859375-20.285156c3.191407-1.757813 5.175781-5.113282 5.175781-8.761719v-53.058594l46.804688-25.699219v47.210938c0 5.523437 4.476562 10 10 10s10-4.476563 10-10v-64.113282c0-3.648437-1.988281-7.007812-5.1875-8.765624zm-186.8125 275.207031-152-83.464844v-166.074219l152 83.460938zm10-183.402344-151.222656-83.039063 47.527344-26.097656 151.226562 83.039063zm68.308594-37.507813-151.226563-83.039062 16.394531-9 151.222657 83.039062zm26.886718 44.21875-16.855468 9.277344v-36.1875l16.855468-9.257812zm10.28125-64.628906-151.222656-83.039062 45.746094-25.117188 151.222656 83.035156zm0 0"></path><path d="m502 198.5625c-2.628906 0-5.210938 1.058594-7.070312 2.929688-1.859376 1.859374-2.929688 4.429687-2.929688 7.070312 0 2.628906 1.070312 5.210938 2.929688 7.070312 1.859374 1.859376 4.441406 2.929688 7.070312 2.929688s5.210938-1.070312 7.070312-2.929688c1.859376-1.859374 2.929688-4.441406 2.929688-7.070312 0-2.640625-1.070312-5.210938-2.929688-7.070312-1.859374-1.871094-4.441406-2.929688-7.070312-2.929688zm0 0"></path><path d="m24.332031 252.890625h-14.332031c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h14.332031c5.523438 0 10-4.476563 10-10 0-5.519531-4.476562-10-10-10zm0 0"></path><path d="m60.671875 190.890625c0-2.628906-1.070313-5.207031-2.933594-7.066406-1.859375-1.863281-4.4375-2.933594-7.066406-2.933594-2.632813 0-5.210937 1.070313-7.070313 2.933594-1.871093 1.859375-2.929687 4.4375-2.929687 7.066406 0 2.632813 1.058594 5.210937 2.929687 7.070313 1.859376 1.859374 4.4375 2.929687 7.070313 2.929687 2.628906 0 5.207031-1.066406 7.066406-2.929687 1.863281-1.859376 2.933594-4.4375 2.933594-7.070313zm0 0"></path></svg></div></div><div class="bottomtxt"><span>3 working days delivery</span><p>free shipping over $120s3mb </p></div></div>
                         </div>
-                        <div class="s3mb col-lg-3"><div class="topall">
+                        <div class="s3mb "><div class="topall">
                             <div class="topsvg"><div class="svg"><svg xmlns="http://www.w3.org/2000/svg" height="512pt" viewBox="0 -57 512 512" width="512pt"><path d="m506.8125 95.679688-172-94.445313c-2.996094-1.644531-6.628906-1.644531-9.625 0l-64.679688 35.515625c-1.460937.40625-2.824218 1.152344-3.980468 2.183594l-103.339844 56.746094c-3.199219 1.757812-5.1875 5.117187-5.1875 8.765624v20.445313h-115.375c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h115.375v36h-57.332031c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h57.332031v52h-84c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h84v20.449219c0 3.648437 1.988281 7.007812 5.1875 8.765625l172 94.445312c1.5.824219 3.15625 1.234375 4.8125 1.234375s3.3125-.410156 4.8125-1.234375l172-94.445312c3.199219-1.757813 5.1875-5.117188 5.1875-8.765625v-44.78125c0-5.519532-4.476562-10-10-10s-10 4.480468-10 10v38.863281l-152 83.464844v-166.078125l48.339844-26.542969v42.125c0 3.539063 1.867187 6.8125 4.910156 8.609375 1.566406.925781 3.328125 1.390625 5.089844 1.390625 1.65625 0 3.316406-.410156 4.820312-1.238281l36.859375-20.285156c3.191407-1.757813 5.175781-5.113282 5.175781-8.761719v-53.058594l46.804688-25.699219v47.210938c0 5.523437 4.476562 10 10 10s10-4.476563 10-10v-64.113282c0-3.648437-1.988281-7.007812-5.1875-8.765624zm-186.8125 275.207031-152-83.464844v-166.074219l152 83.460938zm10-183.402344-151.222656-83.039063 47.527344-26.097656 151.226562 83.039063zm68.308594-37.507813-151.226563-83.039062 16.394531-9 151.222657 83.039062zm26.886718 44.21875-16.855468 9.277344v-36.1875l16.855468-9.257812zm10.28125-64.628906-151.222656-83.039062 45.746094-25.117188 151.222656 83.035156zm0 0"></path><path d="m502 198.5625c-2.628906 0-5.210938 1.058594-7.070312 2.929688-1.859376 1.859374-2.929688 4.429687-2.929688 7.070312 0 2.628906 1.070312 5.210938 2.929688 7.070312 1.859374 1.859376 4.441406 2.929688 7.070312 2.929688s5.210938-1.070312 7.070312-2.929688c1.859376-1.859374 2.929688-4.441406 2.929688-7.070312 0-2.640625-1.070312-5.210938-2.929688-7.070312-1.859374-1.871094-4.441406-2.929688-7.070312-2.929688zm0 0"></path><path d="m24.332031 252.890625h-14.332031c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h14.332031c5.523438 0 10-4.476563 10-10 0-5.519531-4.476562-10-10-10zm0 0"></path><path d="m60.671875 190.890625c0-2.628906-1.070313-5.207031-2.933594-7.066406-1.859375-1.863281-4.4375-2.933594-7.066406-2.933594-2.632813 0-5.210937 1.070313-7.070313 2.933594-1.871093 1.859375-2.929687 4.4375-2.929687 7.066406 0 2.632813 1.058594 5.210937 2.929687 7.070313 1.859376 1.859374 4.4375 2.929687 7.070313 2.929687 2.628906 0 5.207031-1.066406 7.066406-2.929687 1.863281-1.859376 2.933594-4.4375 2.933594-7.070313zm0 0"></path></svg></div></div><div class="bottomtxt"><span>3 working days delivery</span><p>free shipping over $120s3mb </p></div></div>
                         </div>
-                        <div class="s3mb col-lg-3"><div class="topall">
+                        <div class="s3mb "><div class="topall">
                             <div class="topsvg"><div class="svg"><svg xmlns="http://www.w3.org/2000/svg" height="512pt" viewBox="0 -57 512 512" width="512pt"><path d="m506.8125 95.679688-172-94.445313c-2.996094-1.644531-6.628906-1.644531-9.625 0l-64.679688 35.515625c-1.460937.40625-2.824218 1.152344-3.980468 2.183594l-103.339844 56.746094c-3.199219 1.757812-5.1875 5.117187-5.1875 8.765624v20.445313h-115.375c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h115.375v36h-57.332031c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h57.332031v52h-84c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h84v20.449219c0 3.648437 1.988281 7.007812 5.1875 8.765625l172 94.445312c1.5.824219 3.15625 1.234375 4.8125 1.234375s3.3125-.410156 4.8125-1.234375l172-94.445312c3.199219-1.757813 5.1875-5.117188 5.1875-8.765625v-44.78125c0-5.519532-4.476562-10-10-10s-10 4.480468-10 10v38.863281l-152 83.464844v-166.078125l48.339844-26.542969v42.125c0 3.539063 1.867187 6.8125 4.910156 8.609375 1.566406.925781 3.328125 1.390625 5.089844 1.390625 1.65625 0 3.316406-.410156 4.820312-1.238281l36.859375-20.285156c3.191407-1.757813 5.175781-5.113282 5.175781-8.761719v-53.058594l46.804688-25.699219v47.210938c0 5.523437 4.476562 10 10 10s10-4.476563 10-10v-64.113282c0-3.648437-1.988281-7.007812-5.1875-8.765624zm-186.8125 275.207031-152-83.464844v-166.074219l152 83.460938zm10-183.402344-151.222656-83.039063 47.527344-26.097656 151.226562 83.039063zm68.308594-37.507813-151.226563-83.039062 16.394531-9 151.222657 83.039062zm26.886718 44.21875-16.855468 9.277344v-36.1875l16.855468-9.257812zm10.28125-64.628906-151.222656-83.039062 45.746094-25.117188 151.222656 83.035156zm0 0"></path><path d="m502 198.5625c-2.628906 0-5.210938 1.058594-7.070312 2.929688-1.859376 1.859374-2.929688 4.429687-2.929688 7.070312 0 2.628906 1.070312 5.210938 2.929688 7.070312 1.859374 1.859376 4.441406 2.929688 7.070312 2.929688s5.210938-1.070312 7.070312-2.929688c1.859376-1.859374 2.929688-4.441406 2.929688-7.070312 0-2.640625-1.070312-5.210938-2.929688-7.070312-1.859374-1.871094-4.441406-2.929688-7.070312-2.929688zm0 0"></path><path d="m24.332031 252.890625h-14.332031c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h14.332031c5.523438 0 10-4.476563 10-10 0-5.519531-4.476562-10-10-10zm0 0"></path><path d="m60.671875 190.890625c0-2.628906-1.070313-5.207031-2.933594-7.066406-1.859375-1.863281-4.4375-2.933594-7.066406-2.933594-2.632813 0-5.210937 1.070313-7.070313 2.933594-1.871093 1.859375-2.929687 4.4375-2.929687 7.066406 0 2.632813 1.058594 5.210937 2.929687 7.070313 1.859376 1.859374 4.4375 2.929687 7.070313 2.929687 2.628906 0 5.207031-1.066406 7.066406-2.929687 1.863281-1.859376 2.933594-4.4375 2.933594-7.070313zm0 0"></path></svg></div></div><div class="bottomtxt"><span>3 working days delivery</span><p>free shipping over $120s3mb </p></div></div>
                         </div>
-                        <div class="s3mb col-lg-3"><div class="topall">
+                        <div class="s3mb "><div class="topall">
                             <div class="topsvg"><div class="svg"><svg xmlns="http://www.w3.org/2000/svg" height="512pt" viewBox="0 -57 512 512" width="512pt"><path d="m506.8125 95.679688-172-94.445313c-2.996094-1.644531-6.628906-1.644531-9.625 0l-64.679688 35.515625c-1.460937.40625-2.824218 1.152344-3.980468 2.183594l-103.339844 56.746094c-3.199219 1.757812-5.1875 5.117187-5.1875 8.765624v20.445313h-115.375c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h115.375v36h-57.332031c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h57.332031v52h-84c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h84v20.449219c0 3.648437 1.988281 7.007812 5.1875 8.765625l172 94.445312c1.5.824219 3.15625 1.234375 4.8125 1.234375s3.3125-.410156 4.8125-1.234375l172-94.445312c3.199219-1.757813 5.1875-5.117188 5.1875-8.765625v-44.78125c0-5.519532-4.476562-10-10-10s-10 4.480468-10 10v38.863281l-152 83.464844v-166.078125l48.339844-26.542969v42.125c0 3.539063 1.867187 6.8125 4.910156 8.609375 1.566406.925781 3.328125 1.390625 5.089844 1.390625 1.65625 0 3.316406-.410156 4.820312-1.238281l36.859375-20.285156c3.191407-1.757813 5.175781-5.113282 5.175781-8.761719v-53.058594l46.804688-25.699219v47.210938c0 5.523437 4.476562 10 10 10s10-4.476563 10-10v-64.113282c0-3.648437-1.988281-7.007812-5.1875-8.765624zm-186.8125 275.207031-152-83.464844v-166.074219l152 83.460938zm10-183.402344-151.222656-83.039063 47.527344-26.097656 151.226562 83.039063zm68.308594-37.507813-151.226563-83.039062 16.394531-9 151.222657 83.039062zm26.886718 44.21875-16.855468 9.277344v-36.1875l16.855468-9.257812zm10.28125-64.628906-151.222656-83.039062 45.746094-25.117188 151.222656 83.035156zm0 0"></path><path d="m502 198.5625c-2.628906 0-5.210938 1.058594-7.070312 2.929688-1.859376 1.859374-2.929688 4.429687-2.929688 7.070312 0 2.628906 1.070312 5.210938 2.929688 7.070312 1.859374 1.859376 4.441406 2.929688 7.070312 2.929688s5.210938-1.070312 7.070312-2.929688c1.859376-1.859374 2.929688-4.441406 2.929688-7.070312 0-2.640625-1.070312-5.210938-2.929688-7.070312-1.859374-1.871094-4.441406-2.929688-7.070312-2.929688zm0 0"></path><path d="m24.332031 252.890625h-14.332031c-5.523438 0-10 4.480469-10 10 0 5.523437 4.476562 10 10 10h14.332031c5.523438 0 10-4.476563 10-10 0-5.519531-4.476562-10-10-10zm0 0"></path><path d="m60.671875 190.890625c0-2.628906-1.070313-5.207031-2.933594-7.066406-1.859375-1.863281-4.4375-2.933594-7.066406-2.933594-2.632813 0-5.210937 1.070313-7.070313 2.933594-1.871093 1.859375-2.929687 4.4375-2.929687 7.066406 0 2.632813 1.058594 5.210937 2.929687 7.070313 1.859376 1.859374 4.4375 2.929687 7.070313 2.929687 2.628906 0 5.207031-1.066406 7.066406-2.929687 1.863281-1.859376 2.933594-4.4375 2.933594-7.070313zm0 0"></path></svg></div></div><div class="bottomtxt"><span>3 working days delivery</span><p>free shipping over $120s3mb </p></div></div>
                         </div>
                     </div>
@@ -819,24 +832,24 @@
         </div>
     </div>
     <div class="section-4">
-        <div class="container">
+        <div class="mycontainer">
             <div class="s4-top">
                 <h4 class="text-center">TOP <span>BRANDS</span></h4>
             </div>
             <div class="s4-middle">
                 <div class="s4m-all d-flex">
-                    <div class="w-20prcnt"><img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/brand1.jpg.webp" alt=""></div>
-                    <div class="w-20prcnt"><img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/brand1.jpg.webp" alt=""></div>
-                    <div class="w-20prcnt"><img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/brand1.jpg.webp" alt=""></div>
-                    <div class="w-20prcnt"><img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/brand1.jpg.webp" alt=""></div>
-                    <div class="w-20prcnt"><img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/brand1.jpg.webp" alt=""></div>
+                    <div ><img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/brand1.jpg.webp" alt=""></div>
+                    <div ><img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/brand1.jpg.webp" alt=""></div>
+                    <div ><img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/brand1.jpg.webp" alt=""></div>
+                    <div ><img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/brand1.jpg.webp" alt=""></div>
+                    <div ><img src="https://wpbingosite.com/wordpress/kowine/wp-content/webp-express/webp-images/uploads/2021/05/brand1.jpg.webp" alt=""></div>
                 </div>
             </div>
         </div>
     </div>
     <footer>
         <div class="foot-all ">
-            <div class="container d-flex justify-content-between">
+            <div class="mycontainer ">
                 <div class="contactus">
                     <h2>CONTACT US</h2>
                     <div class="ftxt">
@@ -896,7 +909,7 @@
             </div>
         </div>
         <div class="foot-bottom ">
-            <div class="container d-flex justify-content-between">
+            <div class="mycontainer d-flex justify-content-between">
                 <div class="fbl">
                     <p>Copyright © 2021 Kowines Ltd.</p>
                 </div>

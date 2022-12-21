@@ -1389,7 +1389,10 @@ a{
     }
 }
 
-
+.menuhamb{
+    display: none;
+    width: 33%;
+}
 
 
 
@@ -1422,4 +1425,207 @@ a{
     }
     padding: 7px 14px;
 
+}
+
+#bottommenu{
+    height: 50px;
+    background-color: white;
+    border-top: 1px solid #f1f1f1;
+    width: 100%;
+    display: none;                   
+    div{
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    position: fixed;
+    bottom: 0;
+    z-index: 1312312312;
+}
+
+
+@media (max-width:1440px) {
+    .mycontainer{
+        max-width: 97% !important;
+    }
+    .productsrow{
+        .drink{
+            width: 100%;
+            .slider4{
+                div{
+                    img{
+                        width: 150px;
+                        height: 150px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:1200px) {
+    footer{
+        .foot-bottom{
+            margin-bottom: 50px;
+        }
+    }
+    .menuhamb{
+        display: block;
+    }
+    #bottommenu{
+        display: flex;
+    }
+    .h2middle{
+        display: none;
+    }
+    
+    #reslogin{
+        display: none !important;
+    }
+    
+    #resnav2ico{
+        display: none !important;
+    }
+    .h2left{
+        justify-content: center;
+    }
+}
+@media (max-width:1100px) {
+    .productsrow{
+        .drink{
+            width: 100%;
+            .slider4{
+                div{
+                    img{
+                        width: 120px;
+                        height: 120px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+// @media (max-width:1060px) {
+//     .slider3{
+//         .drink{
+//             width: 300px;
+//             height: 300px;
+//             img{
+//                 width: 300px;
+//                 height: 300px;
+//             }
+//         }
+//     }
+// }
+@media (max-width:991px) {
+    .productsrow{
+        grid-template-columns: 100%;
+        .drink{
+            .slider4{
+                div{
+                    width: 220px;
+                    height: 220px;
+                    img{
+                        width: 220px;
+                        height: 220px;
+
+                    }
+                }
+            }
+        }
+        .srt{
+            padding: 0;
+            .srtm{
+                .options{
+                    .otop{
+                        button{
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:930px) {
+    .productsrow{
+        grid-template-columns: 100%;
+        .drink{
+            .slider4{
+                div{
+                    width: 180px;
+                    height: 180px;
+                    img{
+                        width: 180px;
+                        height: 180px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:768px) {
+    footer{
+        .foot-all{
+            .mycontainer{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+    .productsrow{
+        grid-template-columns: 100%;
+        .drink{
+            .slider4{
+                div{
+                    width: 130px;
+                    height: 130px;
+                    img{
+                        width: 130px;
+                        height: 130px;
+
+                    }
+                }
+            }
+        }
+    }
+    .desrev{
+        .dr-all{
+            .dr-bottom{
+                #tab2{
+                    .revarea{
+                        .revareainner{
+                            .ratop{
+                                width: 100%;
+                                margin-bottom: 10px;
+                            }
+                            .rabottom{
+                                width: 100%;
+                                input{
+                                margin-bottom: 10px;
+
+                                }
+                            }
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:700px) {
+    .slider3{
+        .drink{
+            width: 252px;
+            height: 252px;
+            img{
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
 }
