@@ -1152,6 +1152,337 @@ a:hover {
   width: 33%;
 }
 
+#sidenav {
+  transition: 0.3s;
+  overflow-y: scroll;
+  z-index: 123123123;
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  background-color: white;
+  height: 100%;
+}
+#sidenav .upper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 55px;
+  padding: 0 20px;
+  font-size: 14px;
+  color: white;
+  background-color: #c0a483;
+}
+#sidenav .upper i {
+  margin: 0 0 0 10px;
+}
+#sidenav .menu {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#sidenav .menu .homepage {
+  transition: 0.3s;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 280px;
+  padding: 40px 20px 0;
+}
+#sidenav .menu .homepage .uppermenu {
+  margin: 0 0 30px;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  align-items: center;
+}
+#sidenav .menu .homepage .uppermenu i {
+  font-size: 14px;
+}
+#sidenav .menu .homepage .uppermenu h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #c0a483;
+}
+#sidenav .menu .homepage .ovrl h3 {
+  font-size: 14px;
+  font-family: "Marcellus", serif;
+  text-transform: uppercase;
+  padding: 0 0 10px;
+  margin: 0 0 20px;
+  position: relative;
+  font-weight: bold;
+}
+#sidenav .menu .homepage .ovrl h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 20%;
+  background-color: #c0a483;
+}
+#sidenav .menu .homepage .ovrl a {
+  font-family: "Marcellus", serif;
+  font-size: 14px;
+  color: #868686;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  display: block;
+  margin: 0 0 20px;
+  width: 100%;
+}
+#sidenav .menu .shoppage {
+  transition: 0.3s;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 280px;
+  padding: 40px 20px 0;
+}
+#sidenav .menu .shoppage .uppermenu {
+  margin: 0 0 30px;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  align-items: center;
+}
+#sidenav .menu .shoppage .uppermenu i {
+  font-size: 14px;
+}
+#sidenav .menu .shoppage .uppermenu h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #c0a483;
+}
+#sidenav .menu .shoppage .ovrl h3 {
+  font-size: 14px;
+  font-family: "Marcellus", serif;
+  text-transform: uppercase;
+  padding: 0 0 10px;
+  margin: 0 0 20px;
+  position: relative;
+  font-weight: bold;
+}
+#sidenav .menu .shoppage .ovrl h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 20%;
+  background-color: #c0a483;
+}
+#sidenav .menu .shoppage .ovrl a {
+  font-family: "Marcellus", serif;
+  font-size: 14px;
+  color: #868686;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  display: block;
+  margin: 0 0 20px;
+  width: 100%;
+}
+#sidenav .menu .productpage {
+  transition: 0.3s;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 280px;
+  padding: 40px 20px 0;
+}
+#sidenav .menu .productpage .uppermenu {
+  margin: 0 0 30px;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  align-items: center;
+}
+#sidenav .menu .productpage .uppermenu i {
+  font-size: 14px;
+}
+#sidenav .menu .productpage .uppermenu h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #c0a483;
+}
+#sidenav .menu .productpage .ovrl h3 {
+  font-size: 14px;
+  font-family: "Marcellus", serif;
+  text-transform: uppercase;
+  padding: 0 0 10px;
+  margin: 0 0 20px;
+  position: relative;
+  font-weight: bold;
+}
+#sidenav .menu .productpage .ovrl h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 20%;
+  background-color: #c0a483;
+}
+#sidenav .menu .productpage .ovrl a {
+  font-family: "Marcellus", serif;
+  font-size: 14px;
+  color: #868686;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  display: block;
+  margin: 0 0 20px;
+  width: 100%;
+}
+#sidenav .menu .blogpage {
+  transition: 0.3s;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 280px;
+  padding: 40px 20px 0;
+}
+#sidenav .menu .blogpage .uppermenu {
+  margin: 0 0 30px;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  align-items: center;
+}
+#sidenav .menu .blogpage .uppermenu i {
+  font-size: 14px;
+}
+#sidenav .menu .blogpage .uppermenu h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #c0a483;
+}
+#sidenav .menu .blogpage .ovrl h3 {
+  font-size: 14px;
+  font-family: "Marcellus", serif;
+  text-transform: uppercase;
+  padding: 0 0 10px;
+  margin: 0 0 20px;
+  position: relative;
+  font-weight: bold;
+}
+#sidenav .menu .blogpage .ovrl h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 20%;
+  background-color: #c0a483;
+}
+#sidenav .menu .blogpage .ovrl a {
+  font-family: "Marcellus", serif;
+  font-size: 14px;
+  color: #868686;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  display: block;
+  margin: 0 0 20px;
+  width: 100%;
+}
+#sidenav .menu .pagepage {
+  transition: 0.3s;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 280px;
+  padding: 40px 20px 0;
+}
+#sidenav .menu .pagepage .uppermenu {
+  margin: 0 0 30px;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  align-items: center;
+}
+#sidenav .menu .pagepage .uppermenu i {
+  font-size: 14px;
+}
+#sidenav .menu .pagepage .uppermenu h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #c0a483;
+}
+#sidenav .menu .pagepage .ovrl h3 {
+  font-size: 14px;
+  font-family: "Marcellus", serif;
+  text-transform: uppercase;
+  padding: 0 0 10px;
+  margin: 0 0 20px;
+  position: relative;
+  font-weight: bold;
+}
+#sidenav .menu .pagepage .ovrl h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 20%;
+  background-color: #c0a483;
+}
+#sidenav .menu .pagepage .ovrl a {
+  font-family: "Marcellus", serif;
+  font-size: 14px;
+  color: #868686;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  display: block;
+  margin: 0 0 20px;
+  width: 100%;
+}
+#sidenav .menudd {
+  transition: 0.3s;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 40px 20px 0;
+}
+#sidenav .menudd a {
+  font-family: "Marcellus", serif;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  width: 100%;
+}
+#sidenav .menudd a span::before {
+  display: none;
+}
+#sidenav .menudd ul, #sidenav .menudd li {
+  list-style-type: none;
+}
+#sidenav .menudd li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+#sidenav .menudd li i {
+  color: #868686;
+}
+
 #myBtn {
   display: none;
   transition: 0.3s;
@@ -1193,6 +1524,11 @@ a:hover {
   .productsrow .drink .slider4 div img {
     width: 150px;
     height: 150px;
+  }
+}
+@media (min-width: 1201px) {
+  #sidenav {
+    display: none;
   }
 }
 @media (max-width: 1200px) {
