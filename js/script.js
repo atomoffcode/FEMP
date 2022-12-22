@@ -14,12 +14,12 @@
 //   document.querySelector('.shopdropdown').style.display = 'none'
 //   // console.log('ads');
 // })
-document.querySelector('#parametr').addEventListener('click',function(){
-  document.querySelector('.s3-left').style.left = '0px'
-})
-document.querySelector('.closebtn i').addEventListener('click',function(){
-  document.querySelector('.s3-left').style.left = '-330px'
-})
+// document.querySelector('#parametr').addEventListener('click',function(){
+//   document.querySelector('.s3-left').style.left = '0px'
+// })
+// document.querySelector('.closebtn i').addEventListener('click',function(){
+//   document.querySelector('.s3-left').style.left = '-330px'
+// })
 document.querySelector('.menuhamb i').addEventListener('click',function(){
   document.getElementById('sidenav').style.left = '0px'
 })
@@ -33,6 +33,7 @@ document.querySelector('.upper i').addEventListener('click',function(){
   document.querySelectorAll('.pagepage').forEach(x => {x.style.left = '280px'})
 
 })
+
 var NavOpener = function(e){
   // e.preventDefault();
   x = e.parentElement.getAttribute('id')
