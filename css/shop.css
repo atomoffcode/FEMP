@@ -1806,4 +1806,7 @@ a:hover {
     width: 270px;
     height: 270px;
   }
+}
+#ikinci::before {
+  width: 100%;
 }/*# sourceMappingURL=shop.css.map */

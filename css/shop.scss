@@ -2276,6 +2276,10 @@ a{
 
 
 
-
+    #ikinci{
+        &::before{
+            width: 100%;
+        }
+    }
 
       
