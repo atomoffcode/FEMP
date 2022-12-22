@@ -1,3 +1,32 @@
+document.querySelector('.menuhamb i').addEventListener('click',function(){
+    document.getElementById('sidenav').style.left = '0px'
+  })
+  document.querySelector('.upper i').addEventListener('click',function(){
+    document.getElementById('sidenav').style.left = '-280px'
+    document.querySelector('.menudd').style.left = '0px'
+    document.querySelectorAll('.homepage').forEach(x => {x.style.left = '280px'})
+    document.querySelectorAll('.shoppage').forEach(x => {x.style.left = '280px'})
+    document.querySelectorAll('.productpage').forEach(x => {x.style.left = '280px'})
+    document.querySelectorAll('.blogpage').forEach(x => {x.style.left = '280px'})
+    document.querySelectorAll('.pagepage').forEach(x => {x.style.left = '280px'})
+  
+  })
+  var NavOpener = function(e){
+    // e.preventDefault();
+    x = e.parentElement.getAttribute('id')
+    document.querySelector('.menudd').style.left = '-280px'
+    document.querySelector(`.${x}`).style.left = '0'
+  }
+  var NavCloser = function(e){
+    // e.preventDefault();
+    x = e.parentElement.parentElement.getAttribute('class')
+    document.querySelector(`.${x}`).style.left = '280px'
+  
+    document.querySelector('.menudd').style.left = '0px'
+  }
+
+
+
 function GetItems() {
     let basket = JSON.parse(localStorage.getItem('bproducts'));
 
@@ -33,8 +62,8 @@ function GetItems() {
                         </div>
                         <div class="discount"><span>-10%</span></div>
                         <div class="hot"><span>Hot</span></div>
-                        <img class="sec" src="${element.HoverImage}">
-                        <img class="fst" src="${element.Image}" alt="">
+                        <a href="/detail.html"><img class="sec" src="${element.HoverImage}"></a>
+                        <a href="/detail.html"><img class="fst" src="${element.Image}" alt=""></a>
                     </div>
                     <div class="srt">
                     <div class="top">
@@ -46,7 +75,7 @@ function GetItems() {
                         <p>{<span>1</span> review)</p>
                         
                     </div>
-                    <a class="smltxt" href="#">${element.Title}</a>
+                    <a class="smltxt" href="/detail.html">${element.Title}</a>
                     <div class="bottom"><p>$<span>${element.Price}</span>.00</p></div>
                     <div class="tb d-flex justify-content-between">
                         <div class="lft">

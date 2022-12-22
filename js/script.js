@@ -14,8 +14,38 @@
 //   document.querySelector('.shopdropdown').style.display = 'none'
 //   // console.log('ads');
 // })
+document.querySelector('#parametr').addEventListener('click',function(){
+  document.querySelector('.s3-left').style.left = '0px'
+})
+document.querySelector('.closebtn i').addEventListener('click',function(){
+  document.querySelector('.s3-left').style.left = '-330px'
+})
+document.querySelector('.menuhamb i').addEventListener('click',function(){
+  document.getElementById('sidenav').style.left = '0px'
+})
+document.querySelector('.upper i').addEventListener('click',function(){
+  document.getElementById('sidenav').style.left = '-280px'
+  document.querySelector('.menudd').style.left = '0px'
+  document.querySelectorAll('.homepage').forEach(x => {x.style.left = '280px'})
+  document.querySelectorAll('.shoppage').forEach(x => {x.style.left = '280px'})
+  document.querySelectorAll('.productpage').forEach(x => {x.style.left = '280px'})
+  document.querySelectorAll('.blogpage').forEach(x => {x.style.left = '280px'})
+  document.querySelectorAll('.pagepage').forEach(x => {x.style.left = '280px'})
 
+})
+var NavOpener = function(e){
+  // e.preventDefault();
+  x = e.parentElement.getAttribute('id')
+  document.querySelector('.menudd').style.left = '-280px'
+  document.querySelector(`.${x}`).style.left = '0'
+}
+var NavCloser = function(e){
+  // e.preventDefault();
+  x = e.parentElement.parentElement.getAttribute('class')
+  document.querySelector(`.${x}`).style.left = '280px'
 
+  document.querySelector('.menudd').style.left = '0px'
+}
 
 
 if(localStorage.getItem('bproducts') === null) {
@@ -669,8 +699,8 @@ const GetProducts = function() {
                                 </div>
                                 <div class="discount"><span>-10%</span></div>
                                 <div class="hot"><span>Hot</span></div>
-                                <img class="sec" src="${element.hoverImg}">
-                                <img class="fst" src="${element.img}" alt="">
+                                <a href="/detail.html"><img class="sec" src="${element.hoverImg}"></a>
+                                <a href="/detail.html"><img class="fst" src="${element.img}" alt=""></a>
                             </div>
                             <div class="srt">
                             <div class="top">
@@ -682,7 +712,7 @@ const GetProducts = function() {
                                 <p>{<span>1</span> review)</p>
                                 
                             </div>
-                            <a class="smltxt" href="#">${element.title}</a>
+                            <a class="smltxt" href="/detail.html">${element.title}</a>
                             <div class="bottom"><p>$<span>${element.price}</span>.00</p></div>
                             <div class="tb">
                                 <span class=" d-none">${element.id}</span>
