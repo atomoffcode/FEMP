@@ -1,3 +1,11 @@
+function BasketCount() {
+  let basket = JSON.parse(localStorage.getItem('bproducts'));
+  document.getElementById('shopcartcount').innerHTML =  basket.length;
+}
+
+BasketCount()
+
+
 document.querySelector('.menuhamb i').addEventListener('click',function(){
   document.getElementById('sidenav').style.left = '0px'
 })
