@@ -1,3 +1,71 @@
+if(localStorage.getItem('bproducts') === null) {
+  localStorage.setItem('bproducts',JSON.stringify([]))
+}
+var basket = JSON.parse(localStorage.getItem('bproducts'));
+console.log(basket.length);
+
+const AddBasket = function(e) {
+  // e.preventDefault();
+  
+  var id = e.previousElementSibling.innerHTML
+  console.log(id);
+
+  fetch('/json/product.json')
+    .then((response) => response.json())
+    .then((json) => {
+      
+
+
+
+      let pr_id = id
+      let pr_price
+      let pr_image
+      let pr_hovimage
+  let pr_title 
+  json.forEach(x=>{
+    if (x.id == Number(id)) {
+      pr_title = x.title
+      pr_price = x.price
+      pr_image = x.img
+      pr_hovimage = x.hoverImg
+      console.log(pr_id);
+    }
+  })
+  
+      
+
+  let exist_prod = basket.find(pr => pr.Id === pr_id);
+
+  if(exist_prod === undefined) {
+      basket.push({
+          Id: pr_id,
+          Title: pr_title,
+          Price: pr_price,
+          Image: pr_image,
+          HoverImage: pr_hovimage,
+          Count: 1
+      })
+      // document.querySelector('#alert p').innerHTML = 'Səbətə əlavə olundu'
+      // document.getElementById('alert').style.right = '20px'
+  }
+  else{
+      exist_prod.Count += 1;
+      // document.querySelector('#alert p').innerHTML = 'Bu məhsul artıq əlavə olunub'
+      // document.getElementById('alert').style.right = '20px'
+      // document.getElementById('alert').style.backgroundColor = '#FF0033'
+  }
+
+  localStorage.setItem('bproducts',JSON.stringify(basket));
+  // setTimeout(() => {
+  //     document.getElementById('alert').style.right = '-500px'
+  // }, 1500);
+  BasketCount();
+    })
+
+  
+}
+
+
 function BasketCount() {
   let basket = JSON.parse(localStorage.getItem('bproducts'));
   document.getElementById('shopcartcount').innerHTML =  basket.length;
