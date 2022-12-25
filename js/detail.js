@@ -45,20 +45,20 @@ const AddBasket = function(e) {
           HoverImage: pr_hovimage,
           Count: 1
       })
-      // document.querySelector('#alert p').innerHTML = 'Səbətə əlavə olundu'
-      // document.getElementById('alert').style.right = '20px'
+      document.querySelector('#alert p').innerHTML = 'Added to Basket'
+      document.getElementById('alert').style.right = '30px'
   }
   else{
       exist_prod.Count += 1;
-      // document.querySelector('#alert p').innerHTML = 'Bu məhsul artıq əlavə olunub'
-      // document.getElementById('alert').style.right = '20px'
+      document.querySelector('#alert p').innerHTML = 'Already in Basket'
+      document.getElementById('alert').style.right = '30px'
       // document.getElementById('alert').style.backgroundColor = '#FF0033'
   }
 
   localStorage.setItem('bproducts',JSON.stringify(basket));
-  // setTimeout(() => {
-  //     document.getElementById('alert').style.right = '-500px'
-  // }, 1500);
+  setTimeout(() => {
+      document.getElementById('alert').style.right = '-500px'
+  }, 1500);
   BasketCount();
     })
 
