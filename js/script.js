@@ -103,7 +103,7 @@ const AddBasket = function(e) {
       exist_prod.Count += 1;
       document.querySelector('#alert p').innerHTML = 'Already in Basket'
       document.getElementById('alert').style.right = '30px'
-      // document.getElementById('alert').style.backgroundColor = '#FF0033'
+      document.getElementById('alert').style.backgroundColor = 'black'
   }
 
   localStorage.setItem('bproducts',JSON.stringify(basket));
